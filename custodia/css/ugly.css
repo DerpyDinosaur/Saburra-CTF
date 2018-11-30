@@ -1,0 +1,72 @@
+button:focus{
+	outline: 0;
+}
+
+input:focus{
+	outline: 0;
+}
+
+select:focus{
+	outline: 0;
+}
+
+input[type=button].submitButton, input[type=submit].submitButton, input[type=reset].submitButton{
+	display: inline-block;
+	width: 20em;
+	padding: 0.8em 0;
+	margin: 2em;
+	box-sizing: border-box;
+	text-decoration: none;
+
+	text-align: center;
+
+	background-color: rgba(0,0,0,0);
+	color: #000000;
+	border: 0.1em solid #000000;
+	border-radius: 0.12em;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: 	all 0.2s;
+	-ms-transition: 	all 0.2s;
+	-o-transition: 		all 0.2s;
+	transition: 		all 0.2s;
+}
+
+input[type=button].submitButton:hover, input[type=submit].submitButton:hover, input[type=reset].submitButton:hover{
+	color: #207f46;
+	background-color: #39e47e;
+	border-color: #207f46;
+}
+
+input[type=text]{
+	padding: 0.2em 2em 0.2em 1em;
+	margin: 1em;
+    box-sizing: border-box;
+    border: 0.1em solid #000000;
+    border-radius: 0.12em;
+  	background-color: rgba(0,0,0,0);
+    color: black;
+}
+
+label{
+	font-size: 1.5em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #39e47e;
+    color: #207f46;
+}

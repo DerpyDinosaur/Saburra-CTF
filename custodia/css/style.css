@@ -1,0 +1,381 @@
+/*
+COLOURS Light / Dark
+GREEN
+#39e47e = rgb(57, 228, 126)
+#207f46
+
+ORANGE
+#e49939 = rgb(228, 153, 57)
+#7f4c20
+
+RED
+#e43939 = rgb(228, 57, 57)
+#7f2020
+
+PURPLE
+#8839e4 = rgb(136, 57, 228)
+#44207f
+*/
+
+.loadingPage body{
+	opacity: 0;
+}
+
+.loadingPage{
+	height: 100%;
+    overflow-y: hidden;
+	background: url(../images/loading.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.pageLoaded body{
+	opacity: 1;
+	overflow-y: show;
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: 	all 0.8s ease;
+	-ms-transition: 	all 0.8s ease;
+	-o-transition: 		all 0.8s ease;
+	transition: 		all 0.8s ease;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+body{
+	/*background-color: rgba(228, 210, 57, 0.2);*/
+}
+
+h1{
+	font-size: 5em;
+	letter-spacing: 4px;
+	text-align: center;
+	padding: 0.5em 1em 1em 1em;
+	color: rgba(0,0,0,0.33);
+}
+
+h2{
+	text-align: center;
+	font-size: 3em;
+}
+
+p{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.fixWidth{
+	margin: auto auto;
+	width: 800px;
+}
+
+.green{
+	color: #39e47e;
+	text-shadow: 2px 1px black;
+	font-weight: bold;
+}.orange{
+	color: #ff9d2d;
+	text-shadow: 2px 1px black;
+	font-weight: bold;
+}.red{
+	color: #ff2d2d;
+	text-shadow: 2px 1px black;
+	font-weight: bold;
+}.purple{
+	color: #c387ff;
+	text-shadow: 2px 1px black;
+	font-weight: bold;
+}
+
+.levels{
+	font-size: 3em;
+}
+
+.lvlWrap{
+	margin: auto auto;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+}
+
+.levelRow{
+	display: flex;
+}
+
+.lvloneColumn, .lvltwoColumn, .lvlthreeColumn, .lvlfourColumn{
+	width: 50%;
+	margin: 1em;
+}
+
+.lvloneColumn{
+	background-color: rgba(57, 228, 126, 0.2);
+	border-radius: 30px;
+}.lvltwoColumn{
+	background-color: rgba(228, 153, 57, 0.2);
+	border-radius: 30px;
+}.lvlthreeColumn{
+	background-color: rgba(228, 57, 57, 0.2);
+	border-radius: 30px;
+}.lvlfourColumn{
+	background-color: rgba(136, 57, 228, 0.2);
+	border-radius: 30px;
+}
+
+.lvltwoColumn input[type=button]:hover{
+	color: #7f4c20;
+	background-color: #e49939;
+	border-color: #7f4c20;
+}.lvlthreeColumn input[type=button]:hover{
+	color: #7f2020;
+	background-color: #e43939;
+	border-color: #7f2020;
+}.lvlfourColumn input[type=button]:hover{
+	color: #44207f;
+	background-color: #8839e4;
+	border-color: #44207f;
+}
+
+.homeButton{
+	position: fixed;
+	top: 1em;
+	left: 1em;
+    color: black;
+    text-shadow: 2px 2px 0 #ffffff, 4px 4px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.homeButton:hover{
+	color: #2ebc67;
+	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
+}
+
+.submitflagButton{
+	position: fixed;
+	top: 1em;
+	right: 1em;
+    color: black;
+    text-shadow: 2px 2px 0 #ffffff, 4px 4px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submitflagButton:hover{
+	color: #2ebc67;
+	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
+}
+
+/*//////////////////////////////////////////*/
+/*				STEG						*/
+
+.steg{
+	margin-top: 1em;
+	width: 100%;
+	border-style: solid;
+	border-width: 1em;
+	border-radius: 2em;
+}img.steg1{
+	border-color: #39e47e;
+}.steg2{
+	border-color: #ff9d2d;
+}img.steg3{
+	border-color: #ff2d2d;
+}
+
+/*//////////////////////////////////////////*/
+/*				Password Cracking			*/
+
+.aboutPass{
+	width: 800px;
+	margin: auto auto;
+	text-align: center;
+}
+
+.passOneWrap{
+	margin: auto auto;
+	margin-top: 4em;
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+}
+
+.profileWrap{
+	display: flex;
+	justify-content: center;
+}
+
+.passInformaiton{
+	text-align: left;
+	align-self: center;
+	padding-left: 2em;
+}
+
+.passOne{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.passOneProfile{
+	border-radius: 100%;
+	border: 5px solid rgba(0,0,0,0.33);
+}
+
+.passOne input, .passOneSubmit{
+	width: 50% !important;
+	margin: 1em 0 0 0;
+}
+
+.passwordWrap{
+	margin: auto auto;
+	margin-top: 4em;
+	width: 800px;
+}
+
+.otherPass{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sqlPassWrap{
+	width: 100%
+}
+
+.sqlPassWrap div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*//////////////////////////////////////////*/
+/*			    	Cookies    				*/
+
+.cookieLogo{
+	width: 20em;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.cookieWrap{
+	width: 800px;
+	margin: auto auto;
+	padding-top: 2em;
+}
+
+.cookieWrap p{
+	text-align: left;
+}
+
+.cookieSubmit{
+	margin-left: 50% !important;
+	transform: translateX(-50%);
+}
+
+/*//////////////////////////////////////////*/
+/*				HTML One     				*/
+
+div.htmlBody form{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+img.policeLogo{
+	width: 20em;
+	padding: 0 2em 2em 2em;
+}
+
+/*//////////////////////////////////////////*/
+/*				HTML Two     				*/
+
+.center{
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+nav{
+	text-align: center;
+	font-size: 2em;
+	margin: 1em;
+	width: 800px;
+}
+
+nav a{
+	margin: 1em;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+nav a:hover{
+	padding: 1em;
+	color: #39e47e;
+	cursor: pointer;
+}
+
+/*//////////////////////////////////////////*/
+/*				SQL Injection 				*/
+
+.formWrap{
+    text-align: center;
+}
+
+table {
+    width: 800px;
+}
+
+
+/*//////////////////////////////////////////*/
+/*				Submit Page 				*/
+
+.flagInputWrap{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.flagInputWrap form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8em 4em;
+	border-radius: 30px;
+}
+
+form.redTeam{
+	background-color: rgba(255, 132, 132, 0.75);
+}form.blueTeam{
+	background-color: rgba(156, 215, 230, 0.75);
+}
+
+.redTeam input[type=submit]:hover{
+	color: #7f2020;
+	background-color: #e43939;
+	border-color: #7f2020;
+}.blueTeam input[type=submit]:hover{
+	color: #206d7f;
+	background-color: #39cae4;
+	border-color: #206d7f;
+}
+
+.flagInputWrap form label{
+	font-size: 3em;
+}
+
+.flagInputWrap form input, .flagSubmitButton{
+	width: 100% !important;
+}
+
