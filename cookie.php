@@ -9,18 +9,17 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
-	<form class="anonBody">
+	<form autocomplete="off" class="anonBody">
 		<img class="cookieLogo" src="custodia/images/cookielogo.png">
 		<?php
-				
 			if (isset($_GET['admin'])) {
 				if (in_array($_GET['admin'], array('admin', 'adminUser'))) {
 					echo "<p class='green'>Welcome To The Cookie Network Flag: cisforcookie</p>";
 				}
 			}
 		?>
-		<p>Cookie Monster has started an illegal cookie website<br>your job is to gain access by editing the internet packet below <br>and change the cookie parameters.</p>
 		<div class="cookieWrap">
+			<p style="text-align: center;">Cookie Monster has started an illegal cookie website<br>your job is to gain admin access by editing the internet packet below by changing the fields at the bottom.</p><br>
 			<p>GET /login.php HTTP/1.1</p>
 			<p>Host: 192.168.242.123</p>
 			<p>User-Agent: Mozzila/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0</p>

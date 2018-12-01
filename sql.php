@@ -9,12 +9,15 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
+	<p class="info">SQL injection is an attack that can be performed on SQL databases. It envolves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
+	<br>
+	<br>
 	<form class="formWrap" autocomplete="off">
 		<label>User Name / User Number</label><br>
 		<input id="usrName" type="text" placeholder="" name="name"><br>
 		<label>Password</label><br>
 		<input id="pass" type="text" placeholder="" name="password"><br>
-		<input class="submitButton" type="submit" value="Submit">
+		<input class="submitButton lvltwoInput" type="submit" value="Submit">
 	</form>
 	<br>
 	<p class="liveTitle">Database Output</p>
@@ -25,9 +28,14 @@
 		*/
 		echo "<table>";
 	    echo "<tr> <th>UserID</th> <th>Username</th> <th>Password</th> </tr>";
-	   	if (isset($_GET['name'])) {
-	   		if (trim($_GET['name']) == '"OR""="' || trim($_GET['name']) == "'OR''='") {
-	   			echo '<td>1</td>';
+	   	if (isset($_GET['name']) || isset($_GET['password'])) {
+	   		if (in_array(strtolower(str_replace(" ", "",$_GET['name'])), array('"or""="', "'or''='")) || in_array(strtolower(str_replace(" ", "",$_GET['password'])), array('"or""="', "'or''='"))) {
+	   			echo '<td>0</td>';
+				echo '<td>flag</td>';
+				echo '<td>databaseismine</td>';
+				echo "</tr>";
+				////	   			
+				echo '<td>1</td>';
 				echo '<td>michelle</td>';
 				echo '<td>ycqiybboiqkiqwu</td>';
 				echo "</tr>";

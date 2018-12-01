@@ -9,7 +9,7 @@
 <body onload="loaded()">
 	<header class="headerPass">
 		<?php include 'custodia/import/headerContentImp.php'; ?>
-		<p class="aboutPass">
+		<p class="info">
 			Welcome to the password cracking challenge, use the information given to make an attempt on the user's password.
 			This is known as password spraying, try making a list of possible passwords.
 			Then attempt multiple times until success.

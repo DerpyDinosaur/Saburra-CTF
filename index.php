@@ -28,12 +28,12 @@
 		<div class="levelRow">
 			<div class="lvlthreeColumn">
 				<p class="levels red">Level 3</p>
-				<input class="submitButton" type="button" value="Network Packet Analysis">
+				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
 				<input class="submitButton" onclick="location.href='steg.php';" type="button" value="Steganography III">
 			</div>
 			<div class="lvlfourColumn">
 				<p class="levels purple">Level 4</p>
-				<input class="submitButton" type="button" value="The Button">
+				<input class="submitButton" onclick="location.href='button.php';" type="button" value="The Button">
 			</div>
 		</div>
 	</div>

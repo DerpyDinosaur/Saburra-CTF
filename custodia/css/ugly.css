@@ -10,6 +10,30 @@ select:focus{
 	outline: 0;
 }
 
+button.submitButton{
+	display: inline-block;
+	width: 15em;
+	height: 15em;
+	padding: 0.8em 0;
+	margin: 2em 0 0 50%;
+	transform: translateX(-50%);
+	box-sizing: border-box;
+	text-decoration: none;
+
+	text-align: center;
+
+	background-color: rgba(0,0,0,0);
+	color: #000000;
+	border: 0.1em solid #000000;
+	border-radius: 100%;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: 	all 0.2s;
+	-ms-transition: 	all 0.2s;
+	-o-transition: 		all 0.2s;
+	transition: 		all 0.2s;	
+}
+
 input[type=button].submitButton, input[type=submit].submitButton, input[type=reset].submitButton{
 	display: inline-block;
 	width: 20em;
@@ -32,7 +56,7 @@ input[type=button].submitButton, input[type=submit].submitButton, input[type=res
 	transition: 		all 0.2s;
 }
 
-input[type=button].submitButton:hover, input[type=submit].submitButton:hover, input[type=reset].submitButton:hover{
+input[type=button].submitButton:hover, input[type=submit].submitButton:hover, input[type=reset].submitButton:hover, button.submitButton:hover{
 	color: #207f46;
 	background-color: #39e47e;
 	border-color: #207f46;
@@ -67,6 +91,6 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-    background-color: #39e47e;
-    color: #207f46;
+    background-color: #e49939;
+    color: #7f4c20;
 }

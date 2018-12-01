@@ -1,4 +1,9 @@
 /*
+This is a stylesheet and has nothing to do with the CTF besides styling the website.
+But congrats on finding this hidden flag!!
+
+~~~ Flag: stylesheet 
+
 COLOURS Light / Dark
 GREEN
 #39e47e = rgb(57, 228, 126)
@@ -139,6 +144,20 @@ p{
 	border-color: #44207f;
 }
 
+.lvltwoInput:hover{
+	color: #7f4c20 !important;
+	background-color: #e49939 !important;
+	border-color: #7f4c20 !important;
+}.lvlthreeInput:hover{
+	color: #7f2020 !important;
+	background-color: #e43939 !important;
+	border-color: #7f2020 !important;
+}.lvlfourInput:hover{
+	color: #44207f !important;
+	background-color: #8839e4 !important;
+	border-color: #44207f !important;
+}
+
 .homeButton{
 	position: fixed;
 	top: 1em;
@@ -169,6 +188,25 @@ p{
 	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
 }
 
+.info{
+	width: 800px;
+	margin: auto auto;
+	text-align: center;
+}
+
+pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin: auto auto;
+  overflow: auto;
+  width: 800px;
+  padding: 5px;
+  max-height: 600px;
+}
+
+code{
+	margin: auto auto;
+}
+
 /*//////////////////////////////////////////*/
 /*				STEG						*/
 
@@ -186,14 +224,12 @@ p{
 	border-color: #ff2d2d;
 }
 
+.stegTitle{
+	margin: 1em 0;
+}
+
 /*//////////////////////////////////////////*/
 /*				Password Cracking			*/
-
-.aboutPass{
-	width: 800px;
-	margin: auto auto;
-	text-align: center;
-}
 
 .passOneWrap{
 	margin: auto auto;
@@ -322,7 +358,7 @@ nav a{
 
 nav a:hover{
 	padding: 1em;
-	color: #39e47e;
+	color: #e49939;
 	cursor: pointer;
 }
 
@@ -335,6 +371,11 @@ nav a:hover{
 
 table {
     width: 800px;
+    margin-bottom: 3em;
+}
+
+th, td{
+	text-align: center;
 }
 
 
@@ -379,3 +420,41 @@ form.redTeam{
 	width: 100% !important;
 }
 
+/*//////////////////////////////////////////*/
+/*				Reverse Engineering			*/
+
+.reverseBody{
+	width: 800px;
+	margin: 2em auto;
+}
+
+.flagTest{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.flagTest input{
+	width: 50% !important;
+	margin: 1em 0 0 0;
+}
+
+/*//////////////////////////////////////////*/
+/*					The Button				*/
+
+.hidden{
+	display: none;
+}
+
+.buttonBody{
+	width: 800px;
+	margin: 2em auto;	
+}
+
+video{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+}

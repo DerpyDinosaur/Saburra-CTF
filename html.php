@@ -10,7 +10,7 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<div class="htmlBody">
-		<form>
+		<form autocomplete="off">
 			<img class="policeLogo" src="custodia/images/nswpolicelogo.png">
 			<?php
 				if (isset($_GET['password'])) {

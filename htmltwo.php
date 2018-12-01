@@ -19,7 +19,7 @@
 			<a>Media</a>
 			<a>Housing</a>
 		</nav>
-		<input style="margin-left: 50%;transform: translateX(-50%);" class="submitButton " type="button" value="Useless Button">
+		<input style="margin-left: 50%;transform: translateX(-50%);" class="submitButton lvltwoInput" type="button" value="Useless Button">
 		<?php
 			$logUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			$logUrl = substr_replace($logUrl, 'logs.txt', -11);

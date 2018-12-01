@@ -5,19 +5,19 @@ $title = "Submit a Flag";
 $teamIsBlue = null;
 $flagNumber = 0;
 $flags = array(
-	'sandypants',
+	'saucysunset',
 	'S@ndy1999',
 	'cisforcookie',
 	'bondipolice',
-	'derp3',
+	'databaseismine',
 	'secret',
 	'cheekylogs',
-	'derp6',
-	'saucysunset',
+	'Hello World!',
+	'sandypants',
 	'derp8',
 	'fylacterium',
-	'hidden0',
-	'hidden01'
+	'stylesheet',
+	'hidden03'
 );
 
 function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
@@ -51,10 +51,10 @@ function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
 
 		// Write new data to JSON file
 		if(file_put_contents($jsonUrl, $newData)) {
-		    echo 'Data successfully saved';
+		    echo '<p>Data successfully saved</p>';
 		}
 		else 
-		    echo "error";
+		    echo "<p>error</p>";
 
 	}
 	catch (Exception $e) {
@@ -73,8 +73,6 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 	$teamIsBlue = false;
 	writeData($flags, $flagInput, $teamIsBlue, $flagNumber);
 }
-
-
 ?>
 <!DOCTYPE html>
 <html class="loadingPage">
@@ -86,13 +84,18 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 	<header class="headerPass">
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
+	<?php
+		if (in_array($flagInput, $flags)) {
+			echo "<p class='green'>Flag Is Correct</p>";
+		}
+	?>
 	<div class="flagInputWrap">
-		<form class="blueTeam">
+		<form class="blueTeam" autocomplete="off">
 			<label>Blue Team Flag Input</label>
 			<input type="text" placeholder="" name="blueflag">
 			<input class="submitButton flagSubmitButton" type="submit" value="Submit">
 		</form>
-		<form class="redTeam">
+		<form class="redTeam" autocomplete="off">
 			<label>Red Team Flag Input</label>
 			<input type="text" placeholder="" name="redflag">
 			<input class="submitButton flagSubmitButton" type="submit" value="Submit">	
