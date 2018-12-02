@@ -56,6 +56,8 @@ gateUrl       = "custodia/images/sandcastle/gate.png";
 wallUrl       = "custodia/images/sandcastle/wallTwo.png";
 bluePillarUrl = "custodia/images/sandcastle/Bpillar.png";
 redPillarUrl  = "custodia/images/sandcastle/Rpillar.png";
+blueFlagUrl  = "custodia/images/sandcastle/Bflag.png";
+redFlagUrl  = "custodia/images/sandcastle/Rflag.png";
 
 loader
   .add(floorUrl)
@@ -68,6 +70,8 @@ loader
   .add(wallUrl)
   .add(bluePillarUrl)
   .add(redPillarUrl)
+  .add(blueFlagUrl)
+  .add(redFlagUrl)
   .load(setup);
 
 //Define any variables that are used in more than one function
@@ -124,6 +128,14 @@ function setup() {
   pillar.x = 0;
   pillar.y = 600;
 
+  // Create Flag Sprite
+  flag = new Sprite(resources[blueFlagUrl].texture);
+  flag.width = flag.width / sizeMod;
+  flag.height = flag.height / sizeMod;
+  pillar.x = 0;
+  flag.y = 0;
+  flag.alpha = 0;
+
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -174,11 +186,20 @@ function setup() {
   redPillar.height = redPillar.height / sizeMod;
   redPillar.x = redXOffset;
   redPillar.y = 600;
+
+  // Create Flag Sprite
+  redFlag = new Sprite(resources[redFlagUrl].texture);
+  redFlag.width = redFlag.width / sizeMod;
+  redFlag.height = redFlag.height / sizeMod;
+  redFlag.x = redXOffset;
+  redFlag.y = 0;
+  redFlag.alpha = 0;
   
   // Stage Creation
   app.stage.addChild(floorTwo);
   app.stage.addChild(wallTwo);
   app.stage.addChild(pillar);
+  app.stage.addChild(flag);
   app.stage.addChild(wall);
   app.stage.addChild(towers);
   app.stage.addChild(gate);
@@ -187,6 +208,7 @@ function setup() {
   app.stage.addChild(redFloorTwo);
   app.stage.addChild(redWallTwo);
   app.stage.addChild(redPillar);
+  app.stage.addChild(redFlag);
   app.stage.addChild(redWall);
   app.stage.addChild(redTowers);
   app.stage.addChild(redGate);
@@ -231,6 +253,11 @@ function gameLoop(delta){
   else if (redPillar.y > 0 && redFlagScore >= 9) {
     redPillar.y -= 2;
   }
+  else if (redFlag.alpha < 1 && redFlagScore >= 10) {
+    redFlag.alpha += 0.01;
+  }
+
+////////////////////////////////////////////////////////
 
   if (towers.y > 150 && blueFlagScore >= 1) {
     towers.y -= 2;
@@ -260,5 +287,8 @@ function gameLoop(delta){
   }  
   else if (pillar.y > 0 && blueFlagScore >= 9) {
     pillar.y -= 2;
+  }
+  else if (flag.alpha < 1 && blueFlagScore >= 10) {
+    flag.alpha += 0.01;
   }
 }

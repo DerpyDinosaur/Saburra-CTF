@@ -450,11 +450,23 @@ form.redTeam{
 
 .buttonBody{
 	width: 800px;
-	margin: 2em auto;	
+	margin: 2em auto;
 }
 
 video{
 	margin-left: 50%;
 	transform: translateX(-50%);
-	border-radius: 100%;
+	/*border-radius: 100%;*/
+}
+
+.doomForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.doomForm input{
+	width: 50% !important;
+	margin: 1em 0 0 0;
 }

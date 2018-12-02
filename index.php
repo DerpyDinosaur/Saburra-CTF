@@ -8,6 +8,7 @@
 	<header>
 		<a class="submitflagButton" href="submit.php"><i class="fas fa-clipboard-list fa-4x"></i></a>
 		<h1 class="indexTitle">Saburra CTF</h1>
+		<!-- This is a hidden flag: hiddenflag03 -->
 	</header>
 	<div class="fixWidth flex lvlWrap">
 		<div class="levelRow">

@@ -14,10 +14,10 @@ $flags = array(
 	'cheekylogs',
 	'Hello World!',
 	'sandypants',
-	'derp8',
+	'nomoredoomplease',
 	'fylacterium',
 	'stylesheet',
-	'hidden03'
+	'hiddenflag03'
 );
 
 function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
