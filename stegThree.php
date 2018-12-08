@@ -11,8 +11,8 @@
 	</header>
 	<div class="fixWidth">
 		<p>Steganography, latin word for of hiding messages within messages. These days the term is used to define digital objects that hide inforamtion in their metadata or other means. Please complete all of Level 1 challenges before attempting the "red" Level 3 Steg Image. It takes a lot of time to complete.</p>
-		<h2 class="stegTitle green">Steganography I</h2>
-		<img class="steg steg1" src="custodia/images/steg3.png">
+		<h2 class="stegTitle red">Steganography III</h2>
+		<img class="steg steg3" src="custodia/images/steg1.png">
 	</div>
 </body>
 </html>
