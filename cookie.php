@@ -19,14 +19,16 @@
 			}
 		?>
 		<div class="cookieWrap">
-			<p style="text-align: center;">Cookie Monster has started an illegal cookie website<br>your job is to gain admin access by editing the internet packet below by changing the fields at the bottom.</p><br>
+			<p class="info" style="text-align: center;">
+				Cookies contain information that identifies users and their<br>security access type. Cookie Monster has started an illegal cookie website your job is to gain admin access by editing the internet packet below by changing the fields at the bottom. 
+			</p>
 			<p>GET /login.php HTTP/1.1</p>
 			<p>Host: 192.168.242.123</p>
 			<p>User-Agent: Mozzila/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0</p>
 			<p>Accept: text/html,application/xhtml+xml;q=0.9,*/*;q=0.8</p>
 			<p>Accept-Language: en-US,en;q=0.5</p>
 			<p>Accept-Encoding: gzip, deflate</p>
-			<p>Referer: http://192.168.242.123/login.php</p>
+			<p>Referer: http://192.168.242.123/login.php</p><br><br>
 			<p>Cookie:</p>
 			<label>userid=</label><input type="text" name="uid" value="42"><br>
 			<label>user=</label><input type="text" name="user" value="hackerMan"><br>
