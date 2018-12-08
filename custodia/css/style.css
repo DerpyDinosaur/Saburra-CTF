@@ -309,7 +309,7 @@ p{
 	padding-top: 2em;
 }
 
-.cookieWrap p{
+.cookieWrap p:nth-child(n+2){
 	text-align: left;
 }
 

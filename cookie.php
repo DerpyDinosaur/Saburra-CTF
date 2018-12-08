@@ -19,7 +19,7 @@
 			}
 		?>
 		<div class="cookieWrap">
-			<p class="info" style="text-align: center;">
+			<p class="info">
 				Cookies contain information that identifies users and their<br>security access type. Cookie Monster has started an illegal cookie website your job is to gain admin access by editing the internet packet below by changing the fields at the bottom. 
 			</p>
 			<p>GET /login.php HTTP/1.1</p>
