@@ -1,6 +1,6 @@
 # Saburra CTF
 
-**Website:** https://lonetree.site/hax/ctf/
+**Website:** https://lonetree.site/ctf
 
 ---
 
