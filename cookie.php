@@ -20,7 +20,7 @@
 		?>
 		<div class="cookieWrap">
 			<p class="info">
-				Cookies contain information that identifies users and their<br>security access type. Cookie Monster has started an illegal cookie website your job is to gain admin access by editing the internet packet below by changing the fields at the bottom. 
+				Cookies contain information that identifies users and their security access type. Cookie Monster has started an illegal cookie website your job is to gain admin access by editing the internet packet below by changing the fields at the bottom. 
 			</p>
 			<p>GET /login.php HTTP/1.1</p>
 			<p>Host: 192.168.242.123</p>
