@@ -49,7 +49,7 @@
 		<form class="flagTest" autocomplete="off">
 			<label>Flag Tester</label>
 			<input type="text" placeholder="" name="flagTest">
-			<input class="submitButton lvlthreeInput" type="submit" value="Submit">
+			<input class="submitButton lvltwoInput" type="submit" value="Submit">
 		</form>	
 	</div>
 </body>

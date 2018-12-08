@@ -34,7 +34,7 @@
 	<header>
 		<a class="confirmButton" href="submit.php"><i class="fas fa-clipboard-list fa-4x"></i></a>
 		<h1 class="indexTitle" style="padding: 0.5em 1em 0.5em 1em;">Practice Zone</h1>
-		<a class="helpButton" href="index.php"><i class="fas fa-info-circle fa-4x"></i></i></a>
+		<a class="homeButton" href="index.php"><i class="fas fa-home fa-4x"></i></a>
 	</header>
 	<div class="fixWidth flex lvlWrap">
 		<div class="levelRow">

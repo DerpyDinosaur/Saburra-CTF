@@ -22,7 +22,7 @@
 			</div>
 			<div class="lvltwoColumn">
 				<p class="levels orange">Level 2</p>
-				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
+				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
 				<input class="submitButton" onclick="location.href='stegTwo.php';" type="button" value="Steganography II">
 				<input class="submitButton" onclick="location.href='htmltwo.php';" type="button" value="Bad Webdesign II">
 			</div>			
@@ -30,7 +30,7 @@
 		<div class="levelRow">
 			<div class="lvlthreeColumn">
 				<p class="levels red">Level 3</p>
-				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
+				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
 				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
 			</div>
 			<div class="lvlfourColumn">

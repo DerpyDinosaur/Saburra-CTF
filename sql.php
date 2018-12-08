@@ -10,14 +10,12 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<p class="info">SQL injection is an attack that can be performed on SQL databases. It envolves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
-	<br>
-	<br>
 	<form class="formWrap" autocomplete="off">
 		<label>User Name / User Number</label><br>
 		<input id="usrName" type="text" placeholder="" name="name"><br>
 		<label>Password</label><br>
 		<input id="pass" type="text" placeholder="" name="password"><br>
-		<input class="submitButton lvltwoInput" type="submit" value="Submit">
+		<input class="submitButton lvlthreeInput" type="submit" value="Submit">
 	</form>
 	<br>
 	<p class="liveTitle">Database Output</p>

@@ -207,6 +207,7 @@ p{
 .info{
 	width: 800px;
 	margin: auto auto;
+	margin-bottom: 3em;
 	text-align: center;
 }
 
@@ -250,7 +251,6 @@ code{
 
 .passOneWrap{
 	margin: auto auto;
-	margin-top: 4em;
 	display: flex;
 	flex-direction: column;
 	width: 800px;
