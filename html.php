@@ -10,6 +10,7 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<div class="htmlBody">
+		<p class="info">There is something on this website that is not correct web design, try right clicking and select "View Page Source" or "Inspect Element".</p>
 		<form autocomplete="off">
 			<img class="policeLogo" src="custodia/images/nswpolicelogo.png">
 			<?php

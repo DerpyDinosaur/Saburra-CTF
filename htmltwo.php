@@ -9,6 +9,7 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
+	<p class="info">There is something on this website that is not correct web design, try right clicking and select "View Page Source" or "Inspect Element".</p>
 	<div>
 		<!-- Admins please remember to write logs on all changes made -->
 		<h2>Sand Castle Real Estate</h3>

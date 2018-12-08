@@ -51,7 +51,7 @@ function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
 
 		// Write new data to JSON file
 		if(file_put_contents($jsonUrl, $newData)) {
-		    echo '<p>Data successfully saved</p>';
+		    // echo '<p>Data successfully saved</p>';
 		}
 		else 
 		    echo "<p>error</p>";
@@ -85,8 +85,12 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<?php
-		if (in_array($flagInput, $flags)) {
-			echo "<p class='green'>Flag Is Correct</p>";
+		if (isset($_GET['redflag']) || isset($_GET['blueflag'])) {
+			if (in_array($flagInput, $flags)) {
+				echo "<p class='green'>Flag Is Correct</p>";
+			}else{
+				echo "<p class='red'>Flag Is Incorrect</p>";
+			}
 		}
 	?>
 	<div class="flagInputWrap">
