@@ -10,10 +10,10 @@ The Saburra CTF is both a competition that can be held in a two team fashion or 
 
 ---
 
-| Level 1           | Level 2          | Level 3         | Level 4    |
-| ----------------- | ---------------- | --------------- | ---------- |
-| Steganography     | SQL Injection    | ???             | The Button |
-| Password Cracking | Steganography 2  | Steganography 3 |            |
-| Cookies           | Bad Web Design 2 |                 |            |
-| Bad Web Design    |                  |                 |            |
+| Level 1           | Level 2          | Level 3                      | Level 4    |
+| ----------------- | ---------------- | ---------------------------- | ---------- |
+| Steganography     | SQL Injection    | Software Reverse Engineering | The Button |
+| Password Cracking | Steganography 2  | Steganography 3              |            |
+| Cookies           | Bad Web Design 2 |                              |            |
+| Bad Web Design    |                  |                              |            |
 
