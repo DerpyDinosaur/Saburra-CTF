@@ -5,7 +5,6 @@ But congrats on finding this hidden flag!!
 Flag: stylesheet
 
 
-
 COLOURS Light / Dark
 GREEN
 #39e47e = rgb(57, 228, 126)
@@ -61,7 +60,7 @@ h1{
 	font-size: 5em;
 	letter-spacing: 4px;
 	text-align: center;
-	padding: 0.5em 1em 1em 1em;
+	padding: 0.5em 1em 0.5em 1em;
 	color: rgba(0,0,0,0.33);
 }
 
@@ -188,6 +187,21 @@ p{
 .confirmButton:hover{
 	color: #2ebc67;
 	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
+}
+
+.helpButton{
+	position: fixed;
+	top: 1em;
+	left: 1em;
+    color: black;
+    text-shadow: 1px 2px 0 #ffffff, 2px 4px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.helpButton:hover{
+	color: #2ebc67;
+	text-shadow: 1px 2px 0 #ffffff, 3px 4px 0 rgba(32, 127, 70, 0.15);
 }
 
 .info{
