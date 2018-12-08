@@ -173,7 +173,7 @@ p{
 	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
 }
 
-.submitflagButton{
+.confirmButton{
 	position: fixed;
 	top: 1em;
 	right: 1em;
@@ -183,7 +183,7 @@ p{
     transition: 0.2s;
 }
 
-.submitflagButton:hover{
+.confirmButton:hover{
 	color: #2ebc67;
 	text-shadow: 2px 3px 0 #ffffff, 4px 6px 0 rgba(32, 127, 70, 0.15);
 }
