@@ -211,19 +211,6 @@ p{
 	text-align: center;
 }
 
-pre{
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  margin: auto auto;
-  overflow: auto;
-  width: 800px;
-  padding: 5px;
-  max-height: 600px;
-}
-
-code{
-	margin: auto auto;
-}
-
 /*//////////////////////////////////////////*/
 /*				STEG						*/
 
@@ -456,6 +443,19 @@ form.redTeam{
 .flagTest input{
 	width: 50% !important;
 	margin: 1em 0 0 0;
+}
+
+pre{
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin: auto auto;
+  overflow: auto;
+  width: 800px;
+  padding: 5px;
+  max-height: 600px;
+}
+
+code{
+	margin: auto auto;
 }
 
 /*//////////////////////////////////////////*/
