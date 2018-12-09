@@ -19,4 +19,14 @@
 		function loaded(){
 			document.documentElement.className = "pageLoaded";
 		}
+
+		function openTab() {
+			document.getElementById("_submitTab").style.height = "15em";
+			document.getElementById("_closeTab").style.display = "block";
+		}
+
+		function closeTab() {
+			document.getElementById("_submitTab").style.height = "0";
+			document.getElementById("_closeTab").style.display = "none";
+		}
 	</script>
