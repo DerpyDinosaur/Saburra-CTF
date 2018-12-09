@@ -1,4 +1,4 @@
-<?php $title = "THE BUTTON"; ?>
+<?php $title = "Saburra CTF"; ?>
 <!DOCTYPE html>
 <html class="loadingPage">
 <head>
