@@ -1,3 +1,4 @@
+<?php $title = "THE BUTTON"; ?>
 <!DOCTYPE html>
 <html class="loadingPage">
 <head>
@@ -6,10 +7,8 @@
 </head>
 <body onload="loaded()">
 	<header>
-		<a class="confirmButton" href="submit.php"><i class="fas fa-clipboard-list fa-4x"></i></a>
-		<h1 class="indexTitle">Saburra CTF</h1>
+		<?php include 'custodia/import/headerContentImp.php'; ?>
 		<!-- This is a hidden flag: hiddenflag03 -->
-		<a class="helpButton" href="help.php"><i class="fas fa-info-circle fa-4x"></i></i></a>
 	</header>
 	<div class="fixWidth flex lvlWrap">
 		<div class="levelRow">
