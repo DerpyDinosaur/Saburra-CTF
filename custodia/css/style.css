@@ -74,6 +74,17 @@ p{
 	text-align: center;
 }
 
+.submitPopup{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 25%;
+	height: 15em;
+
+	transform: translate(-50%,-50%);
+	z-index: 100;
+}
+
 .fixWidth{
 	margin: auto auto;
 	width: 800px;
@@ -211,8 +222,6 @@ p{
 	text-align: center;
 }
 
-
-
 /*//////////////////////////////////////////*/
 /*				Submit Page 				*/
 
@@ -221,16 +230,22 @@ p{
 	height: 0;
 	position: fixed;
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	z-index: 100;
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: 	all 0.5s ease;
-	-ms-transition: 	all 0.5s ease;
-	-o-transition: 		all 0.5s ease;
-	transition: 		all 0.5s ease;
-	background-color: white;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: 	all 0.2s ease;
+	-ms-transition: 	all 0.2s ease;
+	-o-transition: 		all 0.2s ease;
+	transition: 		all 0.2s ease;
+	/*background-color: white;*/
+	background-image: url(../images/swirl.png);
+    -webkit-box-shadow: 0 8px 15px -6px #777;
+    -moz-box-shadow: 	0 8px 15px -6px #777;
+	box-shadow: 		0 8px 15px -6px #777;
 }
 
 .redTeam, .blueTeam{
@@ -238,17 +253,23 @@ p{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 40%;
+	height: 90%;
+	border-radius: 30px;
 }
 
 .redTeam{
-	background-color: rgba(255, 132, 132, 0.75);
+	background-color: rgba(255, 132, 132, 0.8);
 }.blueTeam{
-	background-color: rgba(156, 215, 230, 0.75);
+	background-color: rgba(156, 215, 230, 0.8);
+}
+
+.redTeam label, .blueTeam label{
+	margin-top: 1em;
 }
 
 .redTeam input, .blueTeam input{
-	width: 25%;
+	width: 33%;
 }
 
 .redTeam input[type=submit]:hover{
@@ -262,7 +283,8 @@ p{
 }
 
 .submitTabButton{
-	margin: 1em 2em 2em 2em !important;
+	margin: 0 2em 2em 2em !important;
+	width: 33%;
 }
 
 .closeTab{
