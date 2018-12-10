@@ -21,7 +21,7 @@
 		}
 
 		function openTab() {
-			document.getElementById("_submitTab").style.height = "15em";
+			document.getElementById("_submitTab").style.height = "25em";
 			document.getElementById("_closeTab").style.display = "block";
 		}
 

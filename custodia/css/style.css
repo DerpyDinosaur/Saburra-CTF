@@ -74,17 +74,6 @@ p{
 	text-align: center;
 }
 
-.submitPopup{
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 25%;
-	height: 15em;
-
-	transform: translate(-50%,-50%);
-	z-index: 100;
-}
-
 .fixWidth{
 	margin: auto auto;
 	width: 800px;
@@ -230,6 +219,7 @@ p{
 	height: 0;
 	position: fixed;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
 	z-index: 100;
@@ -242,10 +232,19 @@ p{
 	-o-transition: 		all 0.2s ease;
 	transition: 		all 0.2s ease;
 	/*background-color: white;*/
-	background-image: url(../images/swirl.png);
+	background-image: url(../images/stripes.png);
     -webkit-box-shadow: 0 8px 15px -6px #777;
     -moz-box-shadow: 	0 8px 15px -6px #777;
 	box-shadow: 		0 8px 15px -6px #777;
+}
+
+.submitPopup{
+	width: 25%;
+	height: 2.1em;
+	flex: 1 100%;
+	z-index: 100;
+	border: none;
+	overflow: hidden;
 }
 
 .redTeam, .blueTeam{
@@ -253,8 +252,8 @@ p{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 40%;
-	height: 90%;
+	width: 33%;
+	height: 50%;
 	border-radius: 30px;
 }
 
@@ -269,7 +268,7 @@ p{
 }
 
 .redTeam input, .blueTeam input{
-	width: 33%;
+	width: 40% !important;
 }
 
 .redTeam input[type=submit]:hover{
@@ -296,6 +295,7 @@ p{
     color: black;
     cursor: pointer;
     transition: 0.2s;
+    z-index: 101;
 }
 
 .closeTab:hover{

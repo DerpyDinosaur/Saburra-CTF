@@ -78,7 +78,7 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flag Checker</title>
+	<?php include 'custodia/import/headImp.php';?>
 </head>
 <body>
 	<?php
