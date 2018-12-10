@@ -1,4 +1,5 @@
-<?php 
+<?php
+error_reporting(0);
 
 $title = "Submit a Flag";
 
@@ -75,15 +76,11 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 }
 ?>
 <!DOCTYPE html>
-<html class="loadingPage">
+<html>
 <head>
-	<title><?php echo $title; ?></title>
-	<?php include 'custodia/import/headImp.php'; ?>
+	<?php include 'custodia/import/headImp.php';?>
 </head>
-<body onload="loaded()">
-	<header class="headerPass">
-		<?php include 'custodia/import/headerContentImp.php'; ?>
-	</header>
+<body>
 	<?php
 		if (isset($_GET['redflag']) || isset($_GET['blueflag'])) {
 			if (in_array($flagInput, $flags)) {
@@ -93,17 +90,5 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 			}
 		}
 	?>
-	<div class="flagInputWrap">
-		<form class="blueTeam" autocomplete="off">
-			<label>Blue Team Flag Input</label>
-			<input type="text" placeholder="" name="blueflag">
-			<input class="submitButton flagSubmitButton" type="submit" value="Submit">
-		</form>
-		<form class="redTeam" autocomplete="off">
-			<label>Red Team Flag Input</label>
-			<input type="text" placeholder="" name="redflag">
-			<input class="submitButton flagSubmitButton" type="submit" value="Submit">	
-		</form>
-	</div>
 </body>
 </html>
