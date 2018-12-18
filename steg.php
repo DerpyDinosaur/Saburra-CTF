@@ -1,4 +1,4 @@
-<?php $title = "Steganography"; ?>
+<?php $title = "Steganography I"; ?>
 <!DOCTYPE html>
 <html class="loadingPage">
 <head>
@@ -11,7 +11,6 @@
 	</header>
 	<div class="fixWidth">
 		<?php include 'custodia/import/stegIntro.php'; ?>
-		<h2 class="stegTitle green">Steganography I</h2>
 		<img class="steg steg1" src="custodia/images/steg3.png">
 	</div>
 </body>
