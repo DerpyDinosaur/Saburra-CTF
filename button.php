@@ -34,7 +34,7 @@
 			}
 		?>
 		<p class="info">Welcome to your demise, your objective is to prevent the doom song.</p>
-		<p class="info"><?php echo $flag; ?></p>
+		<p class="info green"><?php echo $flag; ?></p>
 		<video id='doomvid' class="<?php echo $hideVid; ?>" width='400' height='400' autoplay <?php echo $muteVid; ?>>
 			<source src='custodia/doom.mp4' type='video/mp4'>
 			Your browser does not support this video

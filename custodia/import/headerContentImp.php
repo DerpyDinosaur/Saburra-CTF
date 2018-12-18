@@ -1,5 +1,5 @@
 <div id="_submitTab" class="submitTab">
-	<h1 style="padding: 0 0 0.5em 0; font-size: 3em;">Submit a Flag</h1>
+	<h1 style="">Submit a Flag</h1>
 
 	<iframe class="submitPopup" name="submitFrame"></iframe>
 
