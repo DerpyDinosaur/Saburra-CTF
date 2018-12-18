@@ -226,16 +226,21 @@ p{
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: 	all 0.2s ease;
-	-ms-transition: 	all 0.2s ease;
-	-o-transition: 		all 0.2s ease;
-	transition: 		all 0.2s ease;
-	/*background-color: white;*/
-	background-image: url(../images/stripes.png);
+	-webkit-transition: all 0.33s;
+	-moz-transition: 	all 0.33s;
+	-ms-transition: 	all 0.33s;
+	-o-transition: 		all 0.33s;
+	transition: 		all 0.33s;
+	background-color: #F0F0F0;
+	/*background-image: url(../images/stripes.png);*/
     -webkit-box-shadow: 0 8px 15px -6px #777;
     -moz-box-shadow: 	0 8px 15px -6px #777;
 	box-shadow: 		0 8px 15px -6px #777;
+}
+
+.submitTab h1{
+	padding: 0; 
+	font-size: 3em;
 }
 
 .submitPopup{

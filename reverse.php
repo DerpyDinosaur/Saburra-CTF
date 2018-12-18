@@ -11,15 +11,6 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
-	<?php 
-		if (isset($_GET['flagTest'])) {
-			if ($_GET['flagTest'] == "Hello World!") {
-				echo "<p class='green'>Flag Is Correct: Hello World!</p><br>";
-			}else{
-				echo "<p class='red'>Flag Is Incorrect</p><br>";
-			}
-		}
-	?>
 	<p class="info">Software Reverse Engineering is a skill that allows the user to look at software code and decipher its functionality. Your job is to look at the python code below and work out what the computer is computing. The answer will be a short piece of text, which will also be your flag.</p>
 	<div class="reverseBody">
 		<pre>
@@ -46,11 +37,6 @@
 				    print stringTwo
 			</code>
 		</pre>
-		<form class="flagTest" autocomplete="off">
-			<label>Flag Tester</label>
-			<input type="text" placeholder="" name="flagTest">
-			<input class="submitButton lvltwoInput" type="submit" value="Submit">
-		</form>	
 	</div>
 </body>
 </html>
