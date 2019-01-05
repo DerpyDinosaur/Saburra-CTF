@@ -24,6 +24,8 @@
 				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
 				<input class="submitButton" onclick="location.href='stegTwo.php';" type="button" value="Steganography II">
 				<input class="submitButton" onclick="location.href='htmltwo.php';" type="button" value="Bad Webdesign II">
+				<input class="submitButton" onclick="location.href='hash.php';" type="button" value="Integrity">
+
 			</div>			
 		</div>
 		<div class="levelRow">

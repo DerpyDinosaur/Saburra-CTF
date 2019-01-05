@@ -12,10 +12,8 @@
 	<form autocomplete="off" class="anonBody">
 		<img class="cookieLogo" src="custodia/images/cookielogo.png">
 		<?php
-			if (isset($_GET['admin'])) {
-				if (in_array($_GET['admin'], array('admin', 'adminUser'))) {
-					echo "<p class='green'>Welcome To The Cookie Network Flag: cisforcookie</p>";
-				}
+			if (isset($_GET['admin']) && in_array($_GET['admin'], array('admin', 'adminUser'))) {
+				echo "<p class='green'>Welcome To The Cookie Network Flag: cisforcookie</p>";
 			}
 		?>
 		<div class="cookieWrap">
