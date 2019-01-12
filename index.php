@@ -25,13 +25,13 @@
 				<input class="submitButton" onclick="location.href='stegTwo.php';" type="button" value="Steganography II">
 				<input class="submitButton" onclick="location.href='htmltwo.php';" type="button" value="Bad Webdesign II">
 				<input class="submitButton" onclick="location.href='hash.php';" type="button" value="Integrity">
-
 			</div>			
 		</div>
 		<div class="levelRow">
 			<div class="lvlthreeColumn">
 				<p class="levels red">Level 3</p>
 				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
+				<input class="submitButton" onclick="location.href='recon.php';" type="button" value="Recon">
 				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
 			</div>
 			<div class="lvlfourColumn">
