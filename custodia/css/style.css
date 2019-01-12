@@ -541,3 +541,44 @@ video{
 	width: 50% !important;
 	margin: 1em 0 0 0;
 }
+
+/*//////////////////////////////////////////*/
+/*				Integrity					*/
+
+.fileWrap{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 4em;
+}
+
+.fileWrap div{
+	padding: 0 5em 2em 5em;
+}
+
+.fileWrap p{
+	padding: 0.5em;
+}
+
+.fileIcon{
+	-webkit-transition: all 0.5s;
+	-moz-transition: 	all 0.5s;
+	-ms-transition: 	all 0.5s;
+	-o-transition: 		all 0.5s;
+	transition: 		all 0.5s;
+	color: black;
+}
+
+.fileIcon:hover{
+	color: #e49939;
+	cursor: pointer;
+}
+
+.keysForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 4em;
+}

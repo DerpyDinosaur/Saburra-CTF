@@ -6,7 +6,7 @@ function getFlags(){
       var blueFlagCount = 0;
       var flagArray = JSON.parse(this.responseText);
 
-      for (var i = 0; i < 14; i++) {
+      for (var i = 0; i < 20; i++) {
         if(flagArray.redTeam['flag'+i] == 1) {
           redFlagCount = redFlagCount + 1;
         }
