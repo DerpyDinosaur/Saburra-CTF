@@ -31,8 +31,9 @@
 			<div class="lvlthreeColumn">
 				<p class="levels red">Level 3</p>
 				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
-				<input class="submitButton" onclick="location.href='recon.php';" type="button" value="Recon">
+				<!-- <input class="submitButton" onclick="location.href='recon.php';" type="button" value="Recon"> -->
 				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
+				<input class="submitButton" onclick="location.href='htmlthree.php';" type="button" value="Bad Webdesign III">
 			</div>
 			<div class="lvlfourColumn">
 				<p class="levels purple">Level 4</p>

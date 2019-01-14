@@ -1,11 +1,14 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 
 $title = "Submit a Flag";
 
 $teamIsBlue = null;
 $flagNumber = 0;
 $flags = array(
+	'fylacterium',
+	'stylesheet',
+	'hiddenflag03',
 	'saucysunset',
 	'S@ndy1999',
 	'cisforcookie',
@@ -16,9 +19,7 @@ $flags = array(
 	'Hello World!',
 	'sandypants',
 	'nomoredoomplease',
-	'fylacterium',
-	'stylesheet',
-	'hiddenflag03'
+	'purityisbliss'
 );
 
 function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
@@ -84,9 +85,9 @@ if(isset($_GET['blueflag']) && $_GET['blueflag'] != "" && $_GET['blueflag'] != "
 	<?php
 		if (isset($_GET['redflag']) || isset($_GET['blueflag'])) {
 			if (in_array($flagInput, $flags)) {
-				echo "<p class='green'>Flag Is Correct</p>";
+				echo "<p style='color: #39e47e; font-weight: bold;'>Flag Is Correct</p>";
 			}else{
-				echo "<p class='red'>Flag Is Incorrect</p>";
+				echo "<p style='color: #e43939; font-weight: bold;'>Flag Is Incorrect</p>";
 			}
 		}
 	?>
