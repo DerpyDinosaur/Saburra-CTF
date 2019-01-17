@@ -19,6 +19,8 @@ The Saburra CTF is both a competition that can be held in a two team fashion or 
 
 ---
 
+Hidden Flag: fylacterium
+
 Credits:
 
-Adam, George Test
+Adam, George
