@@ -16,7 +16,7 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<p class="info">
-		You work in an office space, under the company <strong>Sunscreen Co</strong>. You have also recieved various resumes from four people, two of them have provided Md5 hashes. Your objective is to locate the fake resumes. Each file has a key in it, you need to use both keys togeather to unlock your flag.
+		You work in an office space, under the company <strong>Sunscreen Co</strong>. You have also received various resumes from four people, two of them have provided Md5 hashes. Your objective is to locate the fake resumes. Each file has a key in it, you need to use both keys together to unlock your flag.
 	</p>
 	<?php
 		if (isset($_GET['keyone']) && isset($_GET['keytwo']) && $_GET['keyone'] != "" && $_GET['keytwo'] != "") {

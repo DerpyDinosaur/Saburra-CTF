@@ -9,7 +9,7 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
-	<p class="info">SQL injection is an attack that can be performed on SQL databases. It envolves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
+	<p class="info">SQL injection is an attack that can be performed on SQL databases. It involves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
 	<form class="formWrap" autocomplete="off">
 		<label>User Name / User Number</label><br>
 		<input id="usrName" type="text" placeholder="" name="name"><br>
