@@ -18,18 +18,13 @@
 		You work in an office space, under the company <strong>Sunscreen Co</strong>. You have also received various resumes from four people, two of them have provided Md5 hashes. Your objective is to locate the real resumes. Each file has a key in it, you need to use both keys together to unlock your flag.
 	</p>
 	<?php
-		if (isset($_GET['keyone']) && isset($_GET['keytwo']) && $_GET['keyone'] != "" && $_GET['keytwo'] != "") {
-			if ($_GET['keyone'] == '4efaabbe32752c89' || $_GET['keyone'] == '5508202ba11392cb') {
-				if ($_GET['keytwo'] == '4efaabbe32752c89' || $_GET['keytwo'] == '5508202ba11392cb') {
-					if ($_GET['keytwo'] != $_GET['keyone']) {
-						echo "<p class='green'>Correct Flag: purityisbliss</p>";
-					}
-					else{
-						echo "<p class='red'>Incorrect</p>";
-					}
-				}
+		if (isset($_GET['keyone']) && isset($_GET['keytwo'])) {
+			if ($_GET['keyone'] == '4efaabbe32752c89' && $_GET['keytwo'] == '5508202ba11392cb') {
+				echo "<p class='green'>Correct Flag: purityisbliss</p>";
 			}
-			else{
+			elseif ($_GET['keyone'] == '5508202ba11392cb' && $_GET['keytwo'] == '4efaabbe32752c89') {
+				echo "<p class='green'>Correct Flag: purityisbliss</p>";
+			}else{
 				echo "<p class='red'>Incorrect</p>";
 			}
 		}
