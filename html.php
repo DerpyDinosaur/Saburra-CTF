@@ -12,10 +12,11 @@
 	<div class="htmlBody">
 		<p class="info">There is something on this website that is not correct web design, try right clicking and select "View Page Source" or "Inspect Element".</p>
 		<form autocomplete="off">
+			<!-- Administrator Password: password123 -->
 			<img class="policeLogo" src="custodia/images/nswpolicelogo.png">
 			<?php
 				if (isset($_GET['password'])) {
-					if ($_GET['password'] == 'bondipolice') {
+					if ($_GET['password'] == 'password123') {
 						echo "<p class='green'>Correct Flag: bondipolice</p>";
 					}else{
 						echo "<p class='red'>Incorrect Password</p>";
@@ -32,11 +33,6 @@
 			</div>
 			<input class="submitButton" type="submit" value="Submit">
 		</form>
-	</div>
-	<div class="htmlBodyTwo" style="display: none;">
-		<img class="policeLogo" style="margin-left: 50%;transform: translateX(-50%);" src="custodia/images/nswpolicelogo.png">
-		<p class="green">Welcome Administrator</p>
-		<p>Flag: bondipolice</p>
 	</div>
 </body>
 </html>
