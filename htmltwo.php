@@ -1,5 +1,14 @@
 <?php $title = "Bad Web Design II"; ?>
+<?php
+	// $logUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	// $logUrl = substr_replace($logUrl, 'logs.txt', -11);
+	// echo "<!-- Logs Link ".$logUrl." -->";
+?>
 <!DOCTYPE html>
+<!-- 
+Admins please remember to write logs on all changes made
+place them in the logs.txt file within the web server.
+-->
 <html class="loadingPage">
 <head>
 	<title><?php echo $title; ?></title>
@@ -11,7 +20,6 @@
 	</header>
 	<p class="info">There is something on this website that is not correct web design, try right clicking and select "View Page Source" or "Inspect Element".</p>
 	<div>
-		<!-- Admins please remember to write logs on all changes made -->
 		<h2>Sand Castle Real Estate</h2>
 		<p><i class="fas fa-exclamation-triangle"></i>   This website is under construction   <i class="fas fa-exclamation-triangle"></i></p>
 		<nav class="center">
@@ -21,11 +29,6 @@
 			<a>Housing</a>
 		</nav>
 		<input style="margin-left: 50%;transform: translateX(-50%);" class="submitButton lvltwoInput" type="button" value="Useless Button">
-		<?php
-			$logUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-			$logUrl = substr_replace($logUrl, 'logs.txt', -11);
-			echo "<!-- Logs Link ".$logUrl." -->";
-		?>
 	</div>
 </body>
 </html>
