@@ -19,6 +19,7 @@ button.submitButton{
 	text-decoration: none;
 	margin-top: 2em;
 	text-align: center;
+	cursor: pointer;
 
 	background-color: rgba(0,0,0,0);
 	color: #000000;
@@ -39,6 +40,7 @@ input[type=button].submitButton, input[type=submit].submitButton, input[type=res
 	margin: 2em;
 	box-sizing: border-box;
 	text-decoration: none;
+	cursor: pointer;
 
 	text-align: center;
 

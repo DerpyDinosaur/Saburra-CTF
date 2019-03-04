@@ -55,7 +55,7 @@ BLUE
 }
 
 body{
-	/*background-color: rgba(228, 210, 57, 0.2);*/
+	background-image: url(../images/dither.png);
 }
 
 h1{
@@ -81,7 +81,11 @@ p{
 	width: 800px;
 }
 
-.green{
+.grey{
+	color: black;
+	text-shadow: 2px 1px grey;
+	font-weight: bold;
+}.green{
 	color: #39e47e;
 	text-shadow: 2px 1px black;
 	font-weight: bold;
@@ -114,12 +118,35 @@ p{
 	display: flex;
 }
 
-.lvloneColumn, .lvltwoColumn, .lvlthreeColumn, .lvlfourColumn{
-	width: 50%;
-	margin: 1em;
+.lvlzeroColumn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 1em 0;
 }
 
-.lvloneColumn{
+.lvloneColumn, .lvltwoColumn, .lvlthreeColumn, .lvlfourColumn{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 50%;
+}
+
+.columnSpacing:nth-child(odd){
+	margin: 1em 1em 1em 0;
+}
+
+.columnSpacing:nth-child(even){
+	margin: 1em 0 1em 1em;
+}
+
+.lvlzeroColumn{
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 30px;
+}.lvloneColumn{
 	background-color: rgba(57, 228, 126, 0.2);
 	border-radius: 30px;
 }.lvltwoColumn{
@@ -133,7 +160,11 @@ p{
 	border-radius: 30px;
 }
 
-.lvltwoColumn input[type=button]:hover{
+.lvlzeroColumn input[type=button]:hover{
+	color: black;
+	background-color: grey;
+	border-color: black;
+}.lvltwoColumn input[type=button]:hover{
 	color: #7f4c20;
 	background-color: #e49939;
 	border-color: #7f4c20;
@@ -147,7 +178,11 @@ p{
 	border-color: #44207f;
 }
 
-.lvltwoInput:hover{
+.lvlzeroInput:hover{
+	color: black !important;
+	background-color: grey !important;
+	border-color: black !important;
+}.lvltwoInput:hover{
 	color: #7f4c20 !important;
 	background-color: #e49939 !important;
 	border-color: #7f4c20 !important;
@@ -193,8 +228,8 @@ p{
 
 .helpButton{
 	position: fixed;
-	top: 1em;
-	left: 1em;
+	bottom: 1em;
+	right: 1em;
     color: black;
     text-shadow: 1px 2px 0 #ffffff, 2px 4px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -234,7 +269,6 @@ p{
 	-o-transition: 		all 0.33s;
 	transition: 		all 0.33s;
 	background-color: #F0F0F0;
-	/*background-image: url(../images/stripes.png);*/
     -webkit-box-shadow: 0 8px 15px -6px #777;
     -moz-box-shadow: 	0 8px 15px -6px #777;
 	box-shadow: 		0 8px 15px -6px #777;
@@ -308,6 +342,158 @@ p{
 .closeTab:hover{
 	color: #2ebc67;
 }
+
+/*//////////////////////////////////////////*/
+/*				      Null  				*/
+
+.windowWrap{
+	width: 800px;
+	height: 30em;
+	margin: auto auto;
+}
+
+.window{
+	width: 100%;
+	background-color: silver;
+	border-radius: 15px;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.windowHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0 1em;
+}
+
+.windowTitle{
+	font-size: 1.66em;
+}
+
+.windowIcons{
+	display: flex;
+	justify-content: space-around;
+}
+
+.windowIcons i{
+	padding: .5em;
+	text-shadow: 2px 1px grey;
+}
+
+.windowIcons i:nth-child(1){
+	color: #e49939;
+}
+.windowIcons i:nth-child(2){
+	color: #e43939;
+}
+
+.windowGui{
+	display: flex;
+	width: 100%;
+	margin: auto;
+	background-color: rgba(0,0,0,.10);
+	border-radius: 0 0 15px 15px;
+}
+
+.guiTree{
+	width: 35%;
+	background-color: rgba(0,0,0,.10);
+	border-radius: 0 0 0 15px;
+}
+
+.guiTree ul{
+	list-style-type: none;
+	padding: 0 0 0 1em;
+}
+
+.guiTree ul li{
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	margin: 1em 0;
+	font-size: 1.25em;
+}
+
+.guiTree ul li i{
+	padding: 0 .5em 0 0;
+}
+
+.guiTree ul li a{
+	cursor: pointer;
+}
+
+.folderGui{
+	width: 100%;
+	border-radius: 0 0 15px 0;
+}
+
+.folders{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 1em;
+}
+
+.folders li{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+	font-size: 1em;
+	padding: 0 0 1em 0;
+}
+
+.folders li i, .folders li a{
+	cursor: pointer;
+}
+
+.folders li i{
+	font-size: 2em;
+}
+
+.modalBg{
+	position: fixed;
+	display: table;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0,0,0,.75);
+	transition: opacity .3s ease;
+	z-index: 100;
+}
+
+.modalWrap{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.modalWindow{
+	width: 800px;
+	height: 50%;
+	margin: auto;
+
+	background-color: silver;
+	border-radius: 15px;
+	transition: all .3s ease;
+	box-shadow: 5px 10px 18px black;
+
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
+
 
 /*//////////////////////////////////////////*/
 /*				STEG						*/
