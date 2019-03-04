@@ -1,4 +1,5 @@
-<?php 
+<?php
+	// Hacker Blyat 
 	if (isset($_GET['restart']) && $_GET['restart'] == 'true') {
 		$jsonUrl = "custodia/flags.json";
 
@@ -67,14 +68,20 @@
 	</header>
 	<div class="fixWidth flex lvlWrap">
 		<div class="levelRow">
-			<div class="lvloneColumn">
+			<div class="lvlzeroColumn">
+				<p class="levels grey">Level null</p>
+				<input class="submitButton" onclick="location.href='null.php';" type="button" value="Help I'm locked out!">
+			</div>
+		</div>
+		<div class="levelRow">
+			<div class="lvloneColumn columnSpacing">
 				<p class="levels green">Level 1</p>
 				<input class="submitButton" onclick="location.href='steg.php';" type="button" value="Steganography">
 				<input class="submitButton" onclick="location.href='passwdcrack.php';" type="button" value="Password Cracking">
 				<input class="submitButton" onclick="location.href='cookie.php';" type="button" value="Cookies">
 				<input class="submitButton" onclick="location.href='html.php';" type="button" value="Bad Webdesign">
 			</div>
-			<div class="lvltwoColumn">
+			<div class="lvltwoColumn columnSpacing">
 				<p class="levels orange">Level 2</p>
 				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
 				<input class="submitButton" onclick="location.href='stegTwo.php';" type="button" value="Steganography II">
@@ -83,14 +90,14 @@
 			</div>			
 		</div>
 		<div class="levelRow">
-			<div class="lvlthreeColumn">
+			<div class="lvlthreeColumn columnSpacing">
 				<p class="levels red">Level 3</p>
 				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
 				<!-- <input class="submitButton" onclick="location.href='recon.php';" type="button" value="Recon"> -->
 				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
 				<input class="submitButton" onclick="location.href='htmlthree.php';" type="button" value="Bad Webdesign III">
 			</div>
-			<div class="lvlfourColumn">
+			<div class="lvlfourColumn columnSpacing">
 				<p class="levels purple">Level 4</p>
 				<input class="submitButton" onclick="location.href='button.php';" type="button" value="The Button">
 			</div>
