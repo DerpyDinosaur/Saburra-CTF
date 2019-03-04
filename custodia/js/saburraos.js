@@ -17,7 +17,11 @@ var vm = new Vue({
 	},
 	computed:{
 		fullPath: function(){
-			return "root/client/" + this.activeFolder;
+			if (this.activeFolder == "Games" || this.activeFolder == "Recycle Bin") {
+				return "root/client/Desktop/" + this.activeFolder;
+			}else{
+				return "root/client/" + this.activeFolder;
+			}
 		}
 	}
 });

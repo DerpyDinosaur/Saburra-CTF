@@ -51,13 +51,13 @@
 						</li>
 						<!-- Inside Desktop -->
 						<ul>
-							<li v-on:click="activeFolder='Desktop/Games'">
-								<i v-if="activeFolder==='Desktop/Games'" class="far fa-folder-open"></i>
+							<li v-on:click="activeFolder='Games'">
+								<i v-if="activeFolder==='Games'" class="far fa-folder-open"></i>
 								<i v-else class="far fa-folder"></i>
 								<a>Games</a>
 							</li>
-							<li v-on:click="activeFolder='Desktop/Recycle Bin'">
-								<i v-if="activeFolder==='Desktop/Recycle Bin'" class="far fa-folder-open"></i>
+							<li v-on:click="activeFolder='Recycle Bin'">
+								<i v-if="activeFolder==='Recycle Bin'" class="far fa-folder-open"></i>
 								<i v-else class="far fa-folder"></i>
 								<a>Recycle Bin</a>
 							</li>
