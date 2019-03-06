@@ -6,12 +6,12 @@ var vm = new Vue({
 	el: "#app",
 	data: {
 		activeFolder: 'Desktop',
-		folderName: '',
+		fileName: '',
 		showModal: false
 	},
 	methods:{
-		initModal: function(folderName){
-			this.folderName = folderName;
+		initModal: function(fileName){
+			this.fileName = fileName;
 			this.showModal = true;
 		}
 	},

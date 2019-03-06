@@ -10,7 +10,7 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 		<p class="info">
-			Info about this challenge goes here
+			Your best friend has locked themselves out of their Windows PC, by forgetting their password. Using Linux you can bypass windows logins and freely look at files. Your objective is to hunt down where their password is.
 		</p>
 	</header>
 	<!--  -->
@@ -19,12 +19,17 @@
   			<div class="modalBg">
   				<div class="modalWrap">
   					<div class="modalWindow">
-						<div class="windowHeader">
-							<slot name="folderName">Saburra OS</slot>
+						<div class="modalHeader">
+							<slot name="fileName">Saburra OS</slot>
 							<div class="windowIcons" @click="$emit('close')">
 								<i class="fas fa-minus"></i>
 								<i class="fas fa-times"></i>
 							</div>
+						</div>
+						<div class="modalContent">
+							<slot name="content">
+								<p class="red">Error modal content not found</p>
+							</slot>
 						</div>
   					</div>
   				</div>
@@ -44,6 +49,7 @@
 			<div class="windowGui">
 				<div class="guiTree">
 					<ul>
+						<!-- Desktop -->
 						<li v-on:click="activeFolder='Desktop'">
 							<i v-if="activeFolder==='Desktop'" class="far fa-folder-open"></i>
 							<i v-else class="far fa-folder"></i>
@@ -62,53 +68,81 @@
 								<a>Recycle Bin</a>
 							</li>
 						</ul>
-						<li v-on:click="activeFolder='Documents'">
-							<i v-if="activeFolder==='Documents'" class="far fa-folder-open"></i>
-							<i v-else class="far fa-folder"></i>
-							<a>Documents</a>
-						</li>
-						<li v-on:click="activeFolder='Downloads'">
-							<i v-if="activeFolder==='Downloads'" class="far fa-folder-open"></i>
-							<i v-else class="far fa-folder"></i>
-							<a>Downloads</a>
-						</li>
+						<!-- Pictures -->
 						<li v-on:click="activeFolder='Pictures'">
 							<i v-if="activeFolder==='Pictures'" class="far fa-folder-open"></i>
 							<i v-else class="far fa-folder"></i>
 							<a>Pictures</a>
 						</li>
+						<!-- Windows -->
 						<li v-on:click="activeFolder='Windows'">
 							<i v-if="activeFolder==='Windows'" class="far fa-folder-open"></i>
 							<i v-else class="far fa-folder"></i>
 							<a>Windows</a>
 						</li>
+						<!-- Inside Windows -->
+						<ul>
+							<li v-on:click="activeFolder='system32'">
+								<i v-if="activeFolder==='system32'" class="far fa-folder-open"></i>
+								<i v-else class="far fa-folder"></i>
+								<a>system32</a>
+							</li>
+							<li v-on:click="activeFolder='foo'">
+								<i v-if="activeFolder==='foo'" class="far fa-folder-open"></i>
+								<i v-else class="far fa-folder"></i>
+								<a>foo</a>
+							</li>
+						</ul>
 					</ul>
 				</div>
 				<div class="folderGui">
-					<transition name="fade">
-						<ul v-if="activeFolder==='Desktop'" class="folders">
-							<li @click="initModal('Folder')">
-								<i class="fas fa-folder"></i>
-								<a>Folder</a>
-							</li>
-							<li>
-								<i class="fas fa-folder"></i>
-								<a>Folder</a>
-							</li>
-							<li>
-								<i class="far fa-image"></i>
-								<a>Best meme.png</a>
-							</li>
-							<li @click="initModal('Recycle Bin')">
-								<i class="fas fa-trash-alt"></i>
-								<a>Recycle Bin</a>
-							</li>
-						</ul>
-					</transition>
+					<ul v-if="activeFolder==='Desktop'" class="folders">
+						<li @click="initModal('Best meme.png')">
+							<i class="far fa-image"></i>
+							<a>Best meme.png</a>
+						</li>
+						<li @click="initModal('Shopping.txt')">
+							<i class="far fa-file-alt"></i>
+							<a>Shopping.txt</a>
+						</li>
+					</ul>
+					<ul v-if="activeFolder==='Games'" class="folders">
+						<li><i class="fas fa-gamepad"></i><a>Pinball.exe</a></li>
+						<li><i class="fas fa-gamepad"></i><a>Pong.exe</a></li>
+						<li><i class="fas fa-gamepad"></i><a>Space Invaders.exe</a></li>
+						<li><i class="fas fa-gamepad"></i><a>Minesweeper.exe</a></li>
+					</ul>
+					<ul v-if="activeFolder==='Recycle Bin'" class="folders">
+						<li @click="initModal('Passwords.txt')">
+							<i class="far fa-file-alt"></i>
+							<a>Passwords.txt</a>
+						</li>
+						<li @click="initModal('Rofl.png')">
+							<i class="far fa-image"></i>
+							<a>Rofl.png</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<modal v-if="showModal" @close="showModal=false">
-				<p slot="folderName" class="windowTitle">{{ folderName }}</p>
+				<p slot="fileName" class="windowTitle">{{ fileName }}</p>
+				<!-- Desktop -->
+				<img v-if="fileName==='Best meme.png'" slot="content" style="padding:1em;margin:auto;" src="custodia/images/bestmeme.png">
+				<ul v-if="fileName==='Shopping.txt'" slot="content" style="font-size: 2em;padding:1.5em;">
+					<li>Pineapples</li>
+					<li>Grape fruit</li>
+					<li>Feta</li>
+					<li>Pasta</li>
+					<li>Orange juice</li>
+					<li>Whipped cream in a can</li>
+				</ul>
+				<!-- Recycle Bin -->
+				<ul v-if="fileName==='Passwords.txt'" slot="content" style="font-size: 2em;padding:1.5em;list-style-type: none;">
+					<li>Sandy Incorporated = Password1997</li>
+					<li>Bank = QwertLkjh42</li>
+					<li>Facebook = ScruffyIsCute1997</li>
+					<li>Spotify = ScruffyIsCute2019</li>
+				</ul>
 			</modal>
 		</div>	
 	</div>

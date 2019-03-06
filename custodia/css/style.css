@@ -448,6 +448,7 @@ p{
 
 .folders li i, .folders li a{
 	cursor: pointer;
+	text-align: center;
 }
 
 .folders li i{
@@ -484,7 +485,26 @@ p{
 	border-radius: 15px;
 	transition: all .3s ease;
 	box-shadow: 5px 10px 18px black;
+}
 
+.modalHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0 1em;
+}
+
+.modalTitle{
+	font-size: 1.66em;
+}
+
+.modalContent{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	background-color: rgba(0,0,0,.10);
+	border-radius: 0 0 15px 15px;
 }
 
 .fade-enter-active, .fade-leave-active {
