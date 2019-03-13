@@ -96,38 +96,42 @@
 					</ul>
 				</div>
 				<div class="folderGui">
-					<ul v-if="activeFolder==='Desktop'" class="folders">
-						<li @click="initModal('Best meme.png')">
-							<i class="far fa-image"></i>
-							<a>Best meme.png</a>
-						</li>
-						<li @click="initModal('Shopping.txt')">
-							<i class="far fa-file-alt"></i>
-							<a>Shopping.txt</a>
-						</li>
-					</ul>
-					<ul v-if="activeFolder==='Games'" class="folders">
-						<li><i class="fas fa-gamepad"></i><a>Pinball.exe</a></li>
-						<li><i class="fas fa-gamepad"></i><a>Pong.exe</a></li>
-						<li><i class="fas fa-gamepad"></i><a>Space Invaders.exe</a></li>
-						<li><i class="fas fa-gamepad"></i><a>Minesweeper.exe</a></li>
-					</ul>
-					<ul v-if="activeFolder==='Recycle Bin'" class="folders">
-						<li @click="initModal('Passwords.txt')">
-							<i class="far fa-file-alt"></i>
-							<a>Passwords.txt</a>
-						</li>
-						<li @click="initModal('Rofl.png')">
-							<i class="far fa-image"></i>
-							<a>Rofl.png</a>
-						</li>
-					</ul>
+					<transition name=fade>
+						<ul v-if="activeFolder==='Desktop'" class="folders">
+							<li @click="initModal('Best meme.png')">
+								<i class="far fa-image"></i>
+								<a>Best meme.png</a>
+							</li>
+							<li @click="initModal('Shopping.txt')">
+								<i class="far fa-file-alt"></i>
+								<a>Shopping.txt</a>
+							</li>
+						</ul>
+						<ul v-if="activeFolder==='Games'" class="folders">
+							<li><i class="fas fa-gamepad"></i><a>Ratchet and Clank.emu</a></li>
+							<li><i class="fas fa-gamepad"></i><a>Minecraft.exe</a></li>
+							<li><i class="fas fa-gamepad"></i><a>The Sims 4.exe</a></li>
+							<li><i class="fas fa-gamepad"></i><a>Scribblenauts Ultimate.exe</a></li>
+							<li><i class="fas fa-gamepad"></i><a>Portal 2.exe</a></li>
+						</ul>
+						<ul v-if="activeFolder==='Recycle Bin'" class="folders">
+							<li @click="initModal('Passwords.txt')">
+								<i class="far fa-file-alt"></i>
+								<a>Passwords.txt</a>
+							</li>
+							<li @click="initModal('Rofl.png')">
+								<i class="far fa-image"></i>
+								<a>Rofl.png</a>
+							</li>
+						</ul>
+					</transition>
 				</div>
 			</div>
 			<modal v-if="showModal" @close="showModal=false">
 				<p slot="fileName" class="windowTitle">{{ fileName }}</p>
 				<!-- Desktop -->
 				<img v-if="fileName==='Best meme.png'" slot="content" style="padding:1em;margin:auto;" src="custodia/images/bestmeme.png">
+				<!--||-->
 				<ul v-if="fileName==='Shopping.txt'" slot="content" style="font-size: 2em;padding:1.5em;">
 					<li>Pineapples</li>
 					<li>Grape fruit</li>

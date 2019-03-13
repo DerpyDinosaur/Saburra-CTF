@@ -58,6 +58,28 @@
 
 
 
+## Challenge Backgrounds and Definitions
+
+#### Steganography
+
+#### Password Cracking
+
+#### Cookies
+
+#### Bad Web Design
+
+#### Reverse Engineering
+
+#### Integrity
+
+#### SQL Injection
+
+#### The Button
+
+
+
+
+
 
 
 Hidden Flag: fylacterium
