@@ -10,6 +10,11 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<p class="info">SQL injection is an attack that can be performed on SQL databases. It involves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
+	<?php
+		if (isset($_GET['name']) || isset($_GET['password'])) {
+			echo "<p><i>If you are lost check this website out <a href='#'>W3Schools</a></i><p><br>";
+		}
+	?>
 	<form class="formWrap" autocomplete="off">
 		<label>User Name / User Number</label><br>
 		<input id="usrName" type="text" placeholder="" name="name"><br>
