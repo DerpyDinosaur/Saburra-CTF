@@ -54,6 +54,16 @@ BLUE
 	font-size: 1em;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 body{
 	background-image: url(../images/dither.png);
 }
@@ -788,4 +798,105 @@ video{
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 4em;
+}
+
+/*//////////////////////////////////////////*/
+/*				Hack Evil Corp				*/
+
+/*
+PURPLE
+#BA8AF1
+#A05EEA
+#8939E4
+*/
+
+.explorerWrap{
+	width: 1000px;
+	margin: auto auto;
+	background-color: #C694FE;
+	border-radius: 15px;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.explorerUi{
+	display: flex;
+}
+
+.progressWrap{
+	width: 100%;
+	background-color: #DBBEFD;
+	border-radius: 15px 15px 0 0;
+	z-index: 1;
+}
+
+.progress{
+	padding: 1em 3.33em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.levelNode{
+	cursor: default;
+}
+
+.levelNode i{
+	font-size: 2em;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.done{
+	color: #39e47e;
+	text-shadow: 2px 1px black;
+}
+
+/*
+||
+*/
+
+.treePanel{
+	width: 33%;
+	padding: 1em 0 1em 1em;
+	background-color: #b486e8;
+}
+
+.node{
+	width: 100%;
+	text-align: left;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+/*
+||
+*/
+
+.folders{
+	width: 100%;
+}
+
+/*
+||
+*/
+
+.sshLoginWrap{
+	background-color: #DBBEFD;
+	border-radius: 0 0 15px 15px;
+}
+
+.sshTitle{
+	font-size: 2em;
+	text-align: center;
+	padding-top: 1em;
+}
+
+.sshLogin{
+	display: flex;
+	justify-content: center;
+	padding-top: 1em;
+}
+
+.sshLogin div{
+	text-align: center;
 }

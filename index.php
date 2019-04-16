@@ -100,6 +100,7 @@
 			<div class="lvlfourColumn columnSpacing">
 				<p class="levels purple">Level 4</p>
 				<input class="submitButton" onclick="location.href='button.php';" type="button" value="The Button">
+				<input class="submitButton" onclick="location.href='escalate.php';" type="button" value="Hack Evil Corp"> 
 			</div>
 		</div>
 	</div>
