@@ -39,10 +39,18 @@
 
 		<div class="explorerUi">
 			<div class="treePanel">
-				<div class="nodeWrap" v-for="item in cpuOne">
+				<!-- <div class="nodeWrap" v-for="item in activeTree">
 					<div @click="nodeClicked(item.name)" class="node">
 						<i class="far fa-folder"></i>
 						<a>{{item.name}}</a>
+					</div>
+				</div> -->
+				<div v-for="folders in activeTree">
+					<div class="nodeWrap" v-for="item in folders.folders">
+						<div @click="nodeClicked(item.name)" class="node">
+							<i class="far fa-folder"></i>
+							<a>{{item.name}}</a>
+						</div>
 					</div>
 				</div>
 			</div>

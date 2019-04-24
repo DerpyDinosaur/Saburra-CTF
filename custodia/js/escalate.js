@@ -12,34 +12,49 @@ var vm = new Vue({
 			username: '',
 			password: '',
 			//
-			cpuOne: [
-				{
-					name: 'Desktop'
+			trees: {
+				cpuOne: {
+					active: true,
+					folders: [
+						{
+							name: 'Desktop'
+						},
+						{
+							name: 'Downloads'
+						},
+						{
+							name: 'Documents'
+						},
+						{
+							name: 'Pictures'
+						},
+						{
+							name: 'Programs'
+						}
+					]
 				},
-				{
-					name: 'Downloads'
-				},
-				{
-					name: 'Documents'
-				},
-				{
-					name: 'Pictures'
-				},
-				{
-					name: 'Programs'
-				}
-			],
-			cpuTwo: {
-				name: 'Level 2',
-				child: [
-					{
-						name: 'foo'	
-					},
-					{
-						name: 'bar'	
-					}
-				]
+				cpuTwo: {
+					active: false,
+					folders: [
+						{
+							name: 'foo'
+						},
+						{
+							name: 'Downloads'
+						},
+						{
+							name: 'Documents'
+						},
+						{
+							name: 'Pictures'
+						},
+						{
+							name: 'Programs'
+						}
+					]
+				}				
 			},
+			//
 			folders: {
 				desktop: {
 					active: false,
@@ -67,26 +82,38 @@ var vm = new Vue({
 		}
 	},
 	methods: {
-		loginCheck(){			
+		loginCheck(){
+			var treeName		
 			if (this.username == 'adam' && this.password == '123') {
 				this.levelOneDone = true;
 				this.levelSelected = 2;
+				treeName = 'cpuTwo';
 
 			}else if (this.levelOneDone == true && this.username == 'foo' && this.password == '123') {
 				this.levelTwoDone = true;
 				this.levelSelected = 3;
+				treeName = 'cpuThree';
 
 			}else if (this.levelTwoDone == true && this.username == 'bar' && this.password == '123') {
 				this.levelThreeDone = true;
 				this.levelSelected = 4;
+				treeName = 'cpuFour';
 
 			}else if (this.levelThreeDone == true && this.username == 'lar' && this.password == '123') {
 				this.levelFourDone = true;
 
 			}
+
+			var treeCount = Object.getOwnPropertyNames(this.trees).length - 1;
+			for (var i = 0; i < treeCount; i++) {
+				var x = Object.getOwnPropertyNames(this.trees)[i];
+				this.trees[x].active = false;
+			}
+			this.trees[treeName].active = true;
 		},
 		nodeClicked(nodeName){
-			for (var i = 0; i < 2; i++) {
+			var folderCount = Object.getOwnPropertyNames(this.folders).length - 1;
+			for (var i = 0; i < folderCount; i++) {
 				var x = Object.getOwnPropertyNames(this.folders)[i];
 				this.folders[x].active = false;
 			}
@@ -95,9 +122,14 @@ var vm = new Vue({
 	},
 	computed: {
 		activeFolder: function() {
-      		return _.pickBy(this.folders, function(x) {
+      		return _.pickBy(this.folders, function(x){
         		return x.active;
       		});
+		},
+		activeTree: function(){
+			return _.pickBy(this.trees, function(x){
+				return x.active;
+			});
 		}
 	}
 });
