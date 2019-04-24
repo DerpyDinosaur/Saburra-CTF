@@ -9,10 +9,16 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
-	<p class="info">SQL injection is an attack that can be performed on SQL databases. It involves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
+	<p style="margin-bottom: 1.5em;" class="info">SQL injection is an attack that can be performed on SQL databases. It involves placing SQL code inside forms in special ways to get unintended output. Your objective is to find an SQL injection technique to dump the database.</p>
 	<?php
+	   	if (isset($_GET['name']) || isset($_GET['password'])) {
+	   		if (in_array(strtolower(str_replace(" ", "",$_GET['name'])), array('"or""="', "'or''='")) || in_array(strtolower(str_replace(" ", "",$_GET['password'])), array('"or""="', "'or''='"))) {
+	   			echo '<p class="green">Correct scroll down <i class="fas fa-arrow-down"></i></p>';
+	   		}
+		}
+
 		if (isset($_GET['name']) || isset($_GET['password'])) {
-			echo "<p><i>If you are lost check this website out <a href='#'>W3Schools</a></i><p><br>";
+			echo "<p><i>If you are lost check this website out <a href='https://www.w3schools.com/sql/sql_injection.asp'>W3Schools</a></i><p><br>";
 		}
 	?>
 	<form class="formWrap" autocomplete="off">
