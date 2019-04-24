@@ -16,7 +16,7 @@
 			<img class="policeLogo" src="custodia/images/nswpolicelogo.png">
 			<?php
 				if (isset($_GET['password'])) {
-					if ($_GET['password'] == 'password123') {
+					if ($_GET['password'] == 'password123' || $_GET['password'] == '@damIsCool~1997') {
 						echo "<p class='green'>Correct Flag: bondipolice</p>";
 					}else{
 						echo "<p class='red'>Incorrect Password</p>";
