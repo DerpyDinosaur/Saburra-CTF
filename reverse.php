@@ -11,30 +11,26 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
-	<p class="info">Software Reverse Engineering is a skill that allows the user to look at software code and decipher its functionality. Your job is to look at the python code below and work out what the computer is computing. The answer will be a short piece of text, which will also be your flag.</p>
+	<p class="info">Software Reverse Engineering is a skill that allows the user to look at software code and decipher its functionality. Your job is to look at the pseudo code below and work out what the computer is computing. The answer will be a short piece of text, which will also be your flag.</p>
 	<div class="reverseBody">
 		<pre>
 			<code data-language="python">
-				stringOne = "adam is cool"
-				stringTwo = "Hello World!"
-				numOne = 1
-				theMeaningOfLife = 42
+				// Variables
+				string name = "Adam"
+				integer birthYear = 1997
+				integer meaningOfLife = 42
+				boolean whippedCream = true
 
-				if date.year == 1997:
-				    print stringOne
-				else if date.year == numOne:
-				    print "adam is lame"
+				// Main Code
+				if name == "Adam" then
+				  if currentYear - 1997 == 1 then
+				    print "Welcome Creator"
 
-				function do_this (number):
-				    magicNumber = 777
+				if currentYear == 1997 then
+				  print "Adam is a baby"
 
-				    if number == magicNumber:
-				        print "This is the magic number"
-
-				do_this(numOne)
-
-				if theMeaningOfLife == 42:
-				    print stringTwo
+				if whippedCream == true
+				  print meaningOfLife
 			</code>
 		</pre>
 	</div>
