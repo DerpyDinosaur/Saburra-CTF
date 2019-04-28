@@ -15,23 +15,23 @@
 	<div id="app" class="explorerWrap noselect">
 		<div class="progressWrap">
 			<div class="progress">
-				<div class="levelNode" :class="{ done: levelOneDone }">
-					<i :class="[levelOneDone ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
+				<div class="levelNode" :class="{ done: levelOne }">
+					<i :class="[levelOne ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
 					<p>Level 1</p>
 				</div>
 				<!-- || -->
-				<div class="levelNode" :class="{ done: levelTwoDone }">
-					<i :class="[levelTwoDone ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
+				<div class="levelNode" :class="{ done: levelTwo }">
+					<i :class="[levelTwo ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
 					<p>Level 2</p>
 				</div>
 				<!-- || -->
-				<div class="levelNode" :class="{ done: levelThreeDone }">
-					<i :class="[levelThreeDone ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
+				<div class="levelNode" :class="{ done: levelThree }">
+					<i :class="[levelThree ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
 					<p>Level 3</p>
 				</div>
 				<!-- || -->
-				<div class="levelNode" :class="{ done: levelFourDone }">
-					<i :class="[levelFourDone ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
+				<div class="levelNode" :class="{ done: levelFour }">
+					<i :class="[levelFour ? 'fas fa-check-circle' : 'fas fa-desktop']"></i>
 					<p>Level 4</p>
 				</div>
 			</div>
@@ -39,12 +39,6 @@
 
 		<div class="explorerUi">
 			<div class="treePanel">
-				<!-- <div class="nodeWrap" v-for="item in activeTree">
-					<div @click="nodeClicked(item.name)" class="node">
-						<i class="far fa-folder"></i>
-						<a>{{item.name}}</a>
-					</div>
-				</div> -->
 				<div v-for="folders in activeTree">
 					<div class="nodeWrap" v-for="item in folders.folders">
 						<div @click="nodeClicked(item.name)" class="node">

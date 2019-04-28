@@ -4,17 +4,34 @@ var vm = new Vue({
 		return{
 			levelSelected: 1,
 			//
-			levelOneDone: false,
-			levelTwoDone: false,
-			levelThreeDone: false,
-			levelFourDone: false,
+			levelOne: false,
+			levelTwo: false,
+			levelThree: false,
+			levelFour: false,
 			//
 			username: '',
 			password: '',
 			//
 			trees: {
-				cpuOne: {
+				cpuI: {
 					active: true,
+					folders: [
+						{
+							name: 'Desktop'
+						},
+						{
+							name: 'Downloads'
+						},
+						{
+							name: 'Documents'
+						},
+						{
+							name: 'Pictures'
+						}
+					]
+				},
+				cpuII: {
+					active: false,
 					folders: [
 						{
 							name: 'Desktop'
@@ -33,11 +50,11 @@ var vm = new Vue({
 						}
 					]
 				},
-				cpuTwo: {
+				cpuIII: {
 					active: false,
 					folders: [
 						{
-							name: 'foo'
+							name: 'Desktop'
 						},
 						{
 							name: 'Downloads'
@@ -52,12 +69,33 @@ var vm = new Vue({
 							name: 'Programs'
 						}
 					]
-				}				
+				}	,
+				cpuIV: {
+					active: false,
+					folders: [
+						{
+							name: 'Desktop'
+						},
+						{
+							name: 'Downloads'
+						},
+						{
+							name: 'Documents'
+						},
+						{
+							name: 'Pictures'
+						},
+						{
+							name: 'Programs'
+						}
+					]
+				}					
 			},
 			//
 			folders: {
+				///////////////////////////////////////////////////////////////
 				desktop: {
-					active: false,
+					active: true,
 					items: [
 						{
 							name: 'image.png',
@@ -77,6 +115,48 @@ var vm = new Vue({
 							type: 'image'
 						}
 					]
+				},
+				///////////////////////////////////////////////////////////////
+				desktopII: {
+					active: false,
+					items: [
+						{
+							name: 'image.png',
+							type: 'image'
+						},
+						{
+							name: 'password.txt',
+							type: 'document'
+						}		
+					]
+				},
+				///////////////////////////////////////////////////////////////
+				desktopIII: {
+					active: false,
+					items: [
+						{
+							name: 'image.png',
+							type: 'image'
+						},
+						{
+							name: 'password.txt',
+							type: 'document'
+						}		
+					]
+				},
+				///////////////////////////////////////////////////////////////
+				desktopIV: {
+					active: false,
+					items: [
+						{
+							name: 'image.png',
+							type: 'image'
+						},
+						{
+							name: 'password.txt',
+							type: 'document'
+						}		
+					]
 				}
 			}
 		}
@@ -85,23 +165,22 @@ var vm = new Vue({
 		loginCheck(){
 			var treeName		
 			if (this.username == 'adam' && this.password == '123') {
-				this.levelOneDone = true;
+				this.levelOne = true;
 				this.levelSelected = 2;
-				treeName = 'cpuTwo';
+				treeName = 'cpuII';
 
-			}else if (this.levelOneDone == true && this.username == 'foo' && this.password == '123') {
-				this.levelTwoDone = true;
+			}else if (this.levelOne == true && this.username == 'foo' && this.password == '123') {
+				this.levelTwo = true;
 				this.levelSelected = 3;
-				treeName = 'cpuThree';
+				treeName = 'cpuIII';
 
-			}else if (this.levelTwoDone == true && this.username == 'bar' && this.password == '123') {
-				this.levelThreeDone = true;
+			}else if (this.levelTwo == true && this.username == 'bar' && this.password == '123') {
+				this.levelThree = true;
 				this.levelSelected = 4;
-				treeName = 'cpuFour';
+				treeName = 'cpuIV';
 
-			}else if (this.levelThreeDone == true && this.username == 'lar' && this.password == '123') {
-				this.levelFourDone = true;
-
+			}else if (this.levelThree == true && this.username == 'lar' && this.password == '123') {
+				this.levelFour = true;
 			}
 
 			var treeCount = Object.getOwnPropertyNames(this.trees).length - 1;
@@ -113,11 +192,24 @@ var vm = new Vue({
 		},
 		nodeClicked(nodeName){
 			var folderCount = Object.getOwnPropertyNames(this.folders).length - 1;
+			var newNodeName = nodeName;
+
+			if (this.levelThree == true) {
+				newNodeName = newNodeName+"IV";
+			}else if (this.levelTwo == true) {
+				newNodeName = newNodeName+"III";
+			}else if (this.levelOne == true) {
+				newNodeName = newNodeName+"II";
+			}
+
+			newNodeName = newNodeName.charAt(0).toLowerCase() + newNodeName.slice(1);
+
 			for (var i = 0; i < folderCount; i++) {
 				var x = Object.getOwnPropertyNames(this.folders)[i];
 				this.folders[x].active = false;
 			}
-			this.folders[nodeName.toLowerCase()].active = true;
+
+			this.folders[newNodeName].active = true;
 		}
 	},
 	computed: {
