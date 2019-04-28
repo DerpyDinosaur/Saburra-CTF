@@ -61,29 +61,24 @@
 ## Challenge Backgrounds and Definitions
 
 #### Steganography
+Is the act of hiding information in plain sight. 
 
 #### Password Cracking
-
 #### Cookies
-
 #### Bad Web Design
-
 #### Reverse Engineering
-
 #### Integrity
-
 #### SQL Injection
-
 #### The Button
 
+## Credits
 
+Web design
 
+> Adam
 
+Helpers and challenge makers
 
-
+> Adam, George and Connor
 
 Hidden Flag: fylacterium
-
-Credits:
-
-Adam, George, Connor
