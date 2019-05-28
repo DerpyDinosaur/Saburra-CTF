@@ -32,7 +32,7 @@
 	<form class="keysForm" autocomplete="off">
 		<label>Key Input</label><br>
 		<div><input type="text" placeholder="" name="keyone"><span>:</span><input type="text" placeholder="" name="keytwo"></div>
-		<input class="submitButton lvltwoInput" type="submit" value="Submit">
+		<input class="submitButton lvlthreeInput" type="submit" value="Submit">
 	</form>
 	<p>Hash One: 720ca1ffdb3b188e120d7588e9aebfb4</p>
 	<p>Hash Two: e4cff8f88168f9f6640753ab44e87694</p>
