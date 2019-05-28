@@ -539,7 +539,7 @@ p{
 	border-color: #ff9d2d;
 	padding: 1em;
 }img.steg3{
-	border-color: #ff2d2d;
+	border-color: #8839e4;
 }
 
 .stegTitle{
@@ -788,7 +788,7 @@ video{
 }
 
 .fileIcon:hover{
-	color: #e49939;
+	color: #e43939;
 	cursor: pointer;
 }
 
@@ -899,4 +899,24 @@ PURPLE
 
 .sshLogin div{
 	text-align: center;
+}
+
+/*//////////////////////////////////////////*/
+/*			    Phishing         			*/
+
+.phishWrap{
+	display: flex;
+	justify-content: space-around;
+	width: 1000px;
+	height: 500px;
+	margin: auto auto;
+	padding: 2em;
+}
+
+.phishFrame {
+	width: 450px;
+	height: 500px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	overflow: hidden;
+	pointer-events: none;
 }

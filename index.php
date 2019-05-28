@@ -1,5 +1,4 @@
 <?php
-	// Hacker Blyat 
 	if (isset($_GET['restart']) && $_GET['restart'] == 'true') {
 		$jsonUrl = "custodia/flags.json";
 
@@ -19,7 +18,9 @@
 					"flag11" => "0",
 					"flag12" => "0",
 					"flag13" => "0",
-					"flag14" => "0"
+					"flag14" => "0",
+					"flag15" => "0",
+					"flag16" => "0"
 				],
 				"blueTeam" => [
 					"flag1" => "0",
@@ -35,7 +36,9 @@
 					"flag11" => "0",
 					"flag12" => "0",
 					"flag13" => "0",
-					"flag14" => "0"
+					"flag14" => "0",
+					"flag15" => "0",
+					"flag16" => "0"
 				]
 			];
 
@@ -86,7 +89,7 @@
 				<input class="submitButton" onclick="location.href='reverse.php';" type="button" value="Reverse Engineering">
 				<input class="submitButton" onclick="location.href='stegTwo.php';" type="button" value="Steganography II">
 				<input class="submitButton" onclick="location.href='htmltwo.php';" type="button" value="Bad Webdesign II">
-				<input class="submitButton" onclick="location.href='hash.php';" type="button" value="Integrity">
+				<input class="submitButton" onclick="location.href='phishing.php';" type="button" value="Phishing">
 			</div>			
 		</div>
 		<div class="levelRow">
@@ -94,12 +97,13 @@
 				<p class="levels red">Level 3</p>
 				<input class="submitButton" onclick="location.href='sql.php';" type="button" value="SQL Injection">
 				<!-- <input class="submitButton" onclick="location.href='recon.php';" type="button" value="Recon"> -->
-				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
 				<input class="submitButton" onclick="location.href='htmlthree.php';" type="button" value="Bad Webdesign III">
+				<input class="submitButton" onclick="location.href='hash.php';" type="button" value="Integrity">
 			</div>
 			<div class="lvlfourColumn columnSpacing">
 				<p class="levels purple">Level 4</p>
 				<input class="submitButton" onclick="location.href='button.php';" type="button" value="The Button">
+				<input class="submitButton" onclick="location.href='stegThree.php';" type="button" value="Steganography III">
 				<!-- <input class="submitButton" onclick="location.href='escalate.php';" type="button" value="Hack Evil Corp"> -->
 			</div>
 		</div>

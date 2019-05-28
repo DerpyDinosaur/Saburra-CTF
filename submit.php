@@ -20,7 +20,8 @@ $flags = array(
 	'sandypants',
 	'nomoredoomplease',
 	'purityisbliss',
-	'morelikebarfdesign'
+	'morelikebarfdesign',
+	'immalicious.html'
 );
 
 function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
