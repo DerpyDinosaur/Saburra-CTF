@@ -11,7 +11,7 @@
 	</header>
 	<div class="fixWidth">
 		<?php include 'custodia/import/stegIntro.php'; ?>
-		<img class="steg steg1" src="custodia/images/steg3.png">
+		<img class="steg steg1" src="custodia/images/steg1.png">
 	</div>
 </body>
 </html>
