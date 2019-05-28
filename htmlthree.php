@@ -21,7 +21,6 @@ place them in the logs.txt file within the web server.
 	<p class="info">There is something on this website that is not correct web design, try right clicking and select "View Page Source" or "Inspect Element".</p>
 	<div>
 		<h2>Sand Castle Real Estate</h2>
-		<p><i class="fas fa-exclamation-triangle"></i>   This website is under construction   <i class="fas fa-exclamation-triangle"></i></p>
 		<nav class="center">
 			<a>Home</a>
 			<a>About</a>
