@@ -16,8 +16,8 @@
 	</p>
 
 	<div class="phishWrap">
-		<iframe class="phishFrame" frameborder="0" src="instaphish.htm"></iframe>
-		<iframe class="phishFrame" frameborder="0" src="instaphish2.htm"></iframe>
+		<iframe class="phishFrame" frameborder="0" src="custodia/import/phish.html"></iframe>
+		<iframe class="phishFrame" frameborder="0" src="custodia/import/phish2.html"></iframe>
 	</div>
 	
 </body>
