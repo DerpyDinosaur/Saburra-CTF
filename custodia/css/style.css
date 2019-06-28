@@ -575,8 +575,21 @@ p{
 }
 
 .passOneProfile{
-	border-radius: 100%;
-	border: 5px solid rgba(0,0,0,0.33);
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	border-radius: 50%;
+ 	border: 5px solid rgba(32, 127, 70, .5);
+ 	background-color: rgba(57, 228, 126, .15);
+}
+
+.passOneProfile i{
+	padding: 0.05em;
+	color: #39e47e;
+	font-size: 10em;
+	text-shadow: 0.02em 0.02em rgba(32, 127, 70, .75);
 }
 
 .passOne input, .passOneSubmit{
@@ -918,5 +931,5 @@ PURPLE
 	height: 500px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	overflow: hidden;
-	pointer-events: none;
+	user-select: none;
 }

@@ -10,7 +10,7 @@ $flags = array(
 	'stylesheet',
 	'hiddenflag03',
 	'saucysunset',
-	'S@ndy1999',
+	'$lug1971',
 	'cisforcookie',
 	'bondipolice',
 	'databaseismine',
@@ -21,11 +21,12 @@ $flags = array(
 	'nomoredoomplease',
 	'purityisbliss',
 	'morelikebarfdesign',
-	'immalicious.html'
+	'immalicious.com'
 );
 
 function writeData($flags, $flagInput, $teamIsBlue, $flagNumber) {
 	$jsonUrl = "custodia/flags.json";
+
 
 	for ($i=0; $i < count($flags); $i++) { 
 		if ($flagInput == $flags[$i]) {

@@ -17,20 +17,21 @@
 	</header>
 	<div class="passOneWrap">
 		<div class="profileWrap">
-			<img class="passOneProfile" src="custodia/images/sandyProfile.png">
+			<!-- <img class="passOneProfile" src="custodia/images/sandyProfile.png"> -->
+			<div class="passOneProfile"><i class="fas fa-user-secret"></i></div>
 			<p class="passInformaiton">
-				Name: Sandy Cheeks<br>
-				Gender: Female<br>
-				Date of Birth: 1999<br>
-				Occupation: Scientist<br>
-				Residence: Bikini Bottom<br>
+				Name: Arthur Slugworth<br>
+				Gender: Male<br>
+				Date of Birth: 1971<br>
+				Occupation: Chocolatier<br>
+				Residence: Germany<br>
 				Password Length: 9
 			</p>		
 		</div>
 		<?php 
 			if (isset($_GET['passone'])) {
-				if ($_GET['passone'] == "S@ndy1999") {
-					echo "<p style='margin:1em 0;' class='green'>Password is CORRECT, The flag is the password 'S@ndy1999'</p>";
+				if ($_GET['passone'] == "\$lug1971") {
+					echo "<p style='margin:1em 0;' class='green'>Password is CORRECT, The flag is the password '\$lug1971'</p>";
 				}
 				else{
 					echo "<p style='margin:1em 0;' class='red'>Password is INCORRECT <span style='color:black;text-shadow:none;'>Hint: Symbols can replace letters</span></p>";
