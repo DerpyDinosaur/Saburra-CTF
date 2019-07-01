@@ -12,6 +12,12 @@
 	<li>
         <a href="#how-to-guide" style="font-size:1.5em;">
         	3. How to guide</a></li>
+	<li>
+        <a href="#challenge-background" style="font-size:1.5em;">
+        	4. Challenge Backgrounds and Definitions</a></li>
+    <li>
+        <a href="#credits" style="font-size:1.5em;">
+        	5. Credits</a></li>
 </ul>
 
 
@@ -20,8 +26,6 @@
 <p style="text-align:justify;">Capture the flag (CTF) is traditionally known as an out door game played with two flags and two teams. The game is usually integrated into another game like paintball or spotlight to make it more interesting. The objective of capture the flag is in the name, capture the enemies flag and bring it to your flag to score.
 
 <p style="text-align:justify;">A modern CTF exists that doesn't require teams but can be played with them, and plays out more like a race. A modern CTF is completely digital and requires lateral thinking to complete puzzles that reward players with flags. Flags are either a string of random characters for example an MD5 hash (a8db1d82db78ed452ba0882fb9554fc9).</p>
-
-
 
 ## <a id="what-is-saburra">What is Saburra</a>
 <p style="text-align:justify;">
@@ -58,22 +62,42 @@
 
 
 
-## Challenge Backgrounds and Definitions
+## <a id="challenge-backgrounds">Challenge Backgrounds and Definitions</a>
 
 #### Steganography
-Is the act of hiding information in plain sight. 
+> Is the act of hiding information in plain sight. Steganography at its core is a secret that does not draw attention to itself. Think of steg as not only a way to encrypt a message but to also disguise it. This can be done with just about any digital media, images, movies and even music files. If a message can be encrypted and then hidden in plain sight you have succeeded in creating a steg object.
 
 #### Password Cracking
+
+> This is pretty self explanatory but if you seem lost here is an explanation. Password cracking can be performed in a few different ways, brute force, dictionary, rainbow or a hybrid. Brute forcing entails an individual attempting every possibility until the object unlocks. Dictionary attacks are a pre made file full of passwords that are then tested like a brute force. A hybrid involves mixing words from a dictionary and then altering small sections while repetitive testing, for example "adam" is in the dictionary and then the brute force method adds "1900" then the next attempt will be "1901" so on so forth.
+
 #### Cookies
+
+> Are small files stored on a users computer while they browse the internet. These files hold small amounts of data regarding their activity on websites. For example remember password or usernames, language type, theme settings, ect.
+
 #### Bad Web Design
+
+*Coming soon*
+
 #### Reverse Engineering
+
+*Coming soon*
+
 #### Integrity
+
+*Coming soon*
+
 #### SQL Injection
+
+*Coming soon*
+
 #### The Button
 
-## Credits
+*Coming soon*
 
-Web design
+## <a href="credits">Credits</a>
+
+Web designer
 
 > Adam
 
