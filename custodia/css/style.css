@@ -15,7 +15,7 @@ ORANGE
 
 RED
 #e43939 = rgb(228, 57, 57)
-#7f2020
+#7f2020 = rgb(127, 32, 32)
 
 PURPLE
 #8839e4 = rgb(136, 57, 228)
@@ -775,42 +775,70 @@ video{
 /*//////////////////////////////////////////*/
 /*				Integrity					*/
 
-.fileWrap{
+.hashBody .info{
+	margin-bottom: 1.5em;
+}
+
+.hashWrap{
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding-top: 4em;
-}
-
-.fileWrap div{
-	padding: 0 5em 2em 5em;
-}
-
-.fileWrap p{
-	padding: 0.5em;
-}
-
-.fileIcon{
-	-webkit-transition: all 0.5s;
-	-moz-transition: 	all 0.5s;
-	-ms-transition: 	all 0.5s;
-	-o-transition: 		all 0.5s;
-	transition: 		all 0.5s;
-	color: black;
-}
-
-.fileIcon:hover{
-	color: #e43939;
-	cursor: pointer;
-}
-
-.keysForm{
-	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding-bottom: 4em;
+	width: 800px;
+	margin: auto auto;
+}
+
+.hashWrap .inputTitle{
+	padding: 0 0 0.5em 0;
+	color: rgba(0,0,0,0.33);
+}
+
+.convertWrap{
+	display: flex;
+	justify-content: space-around;
+	padding: 0 0 2em 0;
+}
+
+.convertWrap:first-of-type .hashBlock{
+	background-color: #39e47e;
+	border: 0.1em solid #207f46;
+}
+
+.hashBlock{
+	width: 5em;
+	height: 5em;
+	text-align: center;
+
+	border-radius: 20%;
+	background-color: rgba(228, 57, 57, 1);
+	border: 0.1em solid rgb(127, 32, 32);
+}
+
+.correctHash{
+	background-color: #39e47e;
+	border: 0.1em solid #207f46;
+}
+
+.hashBlock p{
+	font-size: 2em;
+	margin-top: 50%;
+	transform: translateY(-50%);
+}
+
+.inputWrap{
+	display: flex;
+	justify-content: space-around;
+}
+
+.inputWrap input{
+	padding: 0;
+    margin: 0;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 2.5em;
+    border-radius: 20%;
+    /*border: 0.1em solid rgba(228, 57, 57, 0.66);*/
+    /*background-color: rgba(228, 57, 57, 0.66);*/
 }
 
 /*//////////////////////////////////////////*/

@@ -19,7 +19,7 @@ $flags = array(
 	'42',
 	'sandypants',
 	'nomoredoomplease',
-	'purityisbliss',
+	'zymes',
 	'morelikebarfdesign',
 	'immalicious.com'
 );
