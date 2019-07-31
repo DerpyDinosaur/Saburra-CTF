@@ -25,7 +25,7 @@
 				Date of Birth: 1971<br>
 				Occupation: Chocolatier<br>
 				Residence: Germany<br>
-				Password Length: 9
+				Password Length: 8
 			</p>		
 		</div>
 		<?php 
