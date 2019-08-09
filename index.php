@@ -1,59 +1,26 @@
 <?php
 	if (isset($_GET['restart']) && $_GET['restart'] == 'true') {
-		$jsonUrl = "custodia/flags.json";
+		require 'custodia/import/database.php';
 
-		try{
-			$original = [
-				"redTeam" => [
-					"flag1" => "0",
-					"flag2" => "0",
-					"flag3" => "0",
-					"flag4" => "0",
-					"flag5" => "0",
-					"flag6" => "0",
-					"flag7" => "0",
-					"flag8" => "0",
-					"flag9" => "0",
-					"flag10" => "0",
-					"flag11" => "0",
-					"flag12" => "0",
-					"flag13" => "0",
-					"flag14" => "0",
-					"flag15" => "0",
-					"flag16" => "0"
-				],
-				"blueTeam" => [
-					"flag1" => "0",
-					"flag2" => "0",
-					"flag3" => "0",
-					"flag4" => "0",
-					"flag5" => "0",
-					"flag6" => "0",
-					"flag7" => "0",
-					"flag8" => "0",
-					"flag9" => "0",
-					"flag10" => "0",
-					"flag11" => "0",
-					"flag12" => "0",
-					"flag13" => "0",
-					"flag14" => "0",
-					"flag15" => "0",
-					"flag16" => "0"
-				]
-			];
+		// $zero = 0;
+		// $teamOne = "redTeam";
+		// $teamTwo = "blueTeam";
+		$sql = "TRUNCATE TABLE users";
+		// $sql = "UPDATE users SET flag1=?, flag2=?, flag3=?, flag4=?, flag5=?, flag6=?, flag7=?, flag8=?, flag9=?, flag10=?, flag11=?, flag12=?, flag13=?, flag14=?, flag15=?, flag16=? WHERE username=? AND username=?";
 
-			$jsondata = json_encode($original, JSON_PRETTY_PRINT);
+		$stmt = mysqli_stmt_init($conn);
+		if (!mysqli_stmt_prepare($stmt, $sql)) {
+			header("Location: index.php?error=sqlerror");
+			exit();
 
-			if(file_put_contents($jsonUrl, $jsondata)) {
-			    echo 'Data successfully saved';
-			}else{
-			    echo "error";
-			}
+		}else{
+			mysqli_stmt_execute($stmt);
+			header("Location: index.php?restartComplete=true");
+			exit();
 		}
-		catch (Exception $e) {
-			echo "There was a problem with the PHP JSON code";
-			echo $e;
-		}
+
+		mysqli_stmt_close($stmt);
+		mysqli_close($conn);
 	}
 
 	$title = "Saburra CTF"; 
@@ -68,6 +35,24 @@
 	<header>
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 		<!-- This is a hidden flag: hiddenflag03 -->
+		<?php
+			if ($_GET['flagSubmit'] == "true") {
+				echo "<p style='color:#39e47e;text-align:center;font-size:2.5em;'>Congratulations Flag was correct</p>";
+
+			}elseif($_GET['flagSubmit'] == "false"){
+				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Flag was incorrect</p>";
+
+			}elseif($_GET['error'] == "emptyfields"){
+				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Please fill all parts of the form</p>";
+
+			}elseif($_GET['error'] == "invalidform"){
+				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Stop trying to break my website</p>";
+
+			}elseif($_GET['error'] == "sqlerror"){
+				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Something went wrong???</p>";
+
+			}
+		?>
 	</header>
 	<div class="fixWidth flex lvlWrap">
 		<div class="levelRow">

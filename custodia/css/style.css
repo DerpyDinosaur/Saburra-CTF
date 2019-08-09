@@ -259,6 +259,28 @@ p{
 }
 
 /*//////////////////////////////////////////*/
+/*			    	Scoreboard 	 	 	 	*/
+
+table {
+	width: 575px;
+	border-collapse: collapse;
+	font-size: 1.5em;
+}
+
+th, td {
+	text-align: left;
+	padding: 0.5em;
+}
+
+tr:nth-child(even) {background-color: rgba(0, 0, 0, 0.05);}
+
+.refreshWrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*//////////////////////////////////////////*/
 /*				Submit Page 				*/
 
 .submitTab{
@@ -279,9 +301,11 @@ p{
 	-o-transition: 		all 0.33s;
 	transition: 		all 0.33s;
 	background-color: rgba(240, 240, 240, 1);
+	background-image: url(../images/dither.png);
     -webkit-box-shadow: 0 8px 15px -6px #777;
     -moz-box-shadow: 	0 8px 15px -6px #777;
 	box-shadow: 		0 8px 15px -6px #777;
+
 }
 
 .flagForm{
@@ -291,63 +315,68 @@ p{
 	align-items: center;
 }
 
-.flagForm .flagInput, .flagForm .submitButton{
-	margin: 2em 0 0 0 !important;
-	width: 100%;
+.radioContainer{
+	cursor: pointer;
+	user-select: none;
+	margin: 0 1em;
+}
+
+.radioContainer input{
+	display: none;
+
+}
+
+.flagForm input:disabled{
+	background-color: rgba(0,0,0,0.33);
+	cursor: not-allowed;
+}
+
+.radioContainer span{
+	display: inline-block;
+	text-align: center;
+	width: 6em;
+	border: 3px solid black;
+	-webkit-transition: all 0.2s;
+	-moz-transition: 	all 0.2s;
+	-ms-transition: 	all 0.2s;
+	-o-transition: 		all 0.2s;
+	transition: 		all 0.2s;
+}
+
+.radioSolo input:checked + span{
+	background-color: #2ebc67;
+}
+
+.radioSolo:hover span{
+	color: white;
+	background-color: #2ebc67;
+}
+
+.radioRed input:checked + span{
+	background-color: #e43939;
+}
+
+.radioRed:hover span{
+	color: white;
+	background-color: #e43939;
+}
+
+.radioBlue input:checked + span{
+	background-color: #39cae4;
+}
+
+.radioBlue:hover span{
+	color: white;
+	background-color: #39cae4;
+}
+
+.flagForm .submitFlagFormInput, .flagForm .submitButton{
+	width: 20em;
+	font-size: 1.5em;
 }
 
 .submitTab h1{
-	padding: 0; 
-	font-size: 3em;
-	color: black;
-}
-
-.submitPopup{
-	width: 25%;
-	height: 2.1em;
-	flex: 1 100%;
-	z-index: 100;
-	border: none;
-	overflow: hidden;
-}
-
-.redTeam, .blueTeam{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 33%;
-	height: 50%;
-	border-radius: 30px;
-}
-
-.redTeam{
-	background-color: rgba(255, 132, 132, 0.8);
-}.blueTeam{
-	background-color: rgba(156, 215, 230, 0.8);
-}
-
-.redTeam label, .blueTeam label{
-	margin-top: 1em;
-}
-
-.redTeam input, .blueTeam input{
-	width: 40% !important;
-}
-
-.redTeam input[type=submit]:hover{
-	color: #7f2020;
-	background-color: #e43939;
-	border-color: #7f2020;
-}.blueTeam input[type=submit]:hover{
-	color: #206d7f;
-	background-color: #39cae4;
-	border-color: #206d7f;
-}
-
-.submitTabButton{
-	margin: 0 2em 2em 2em !important;
-	width: 33%;
+	font-size: 4em;
 }
 
 .closeTab{

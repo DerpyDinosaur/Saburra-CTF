@@ -1,34 +1,33 @@
+<?php
+	error_reporting(0);
+?>
 <div id="_submitTab" class="submitTab">
 			<a id="_closeTab" class="closeTab" href="javascript:void(0)" onclick="closeTab()"><i class="fas fa-times"></i></a>
+			<h1 class="title">Submit a Flag</h1>
 
-			<h1 style="">Submit a Flag</h1><br><br>
-			<form class="flagForm" action="" method="post" autocomplete="off">
+			<form class="flagForm" action="custodia/import/submitFlag.php" method="post" autocomplete="off">
 				<div class="radioWrap">
-					<div>
-						<input id="toggle-on" class="toggle toggle-left" name="region" value="redTeam" type="radio" checked>
-						<label for="toggle-on" class="switch">Red Team</label>
-						<input id="toggle-off" class="toggle toggle-right" name="region" value="blueTeam" type="radio">
-						<label for="toggle-off" class="switch">Blue Team</label>
-					</div>
+					<label class="radioContainer radioSolo">
+						<input name="team" value="solo" type="radio" checked>
+						<span onclick="document.getElementById('_userInput').disabled = false;" class="radioButton">Solo</span>
+					</label>
+					<label class="radioContainer radioRed">
+						<input name="team" value="redTeam" type="radio">
+						<span onclick="document.getElementById('_userInput').disabled = true;" class="radioButton">Red Team</span>
+					</label>
+					<label class="radioContainer radioBlue">
+						<input name="team" value="blueTeam" type="radio">
+						<span onclick="document.getElementById('_userInput').disabled = true;" class="radioButton">Blue Team</span>
+					</label>
 				</div>
-				<input class="flagInput" type="text" placeholder="Enter flag here" name="flag">
-				<input class="submitButton" type="submit" name="submit" value="Check Flag">
-			</div>
-
-			<!-- <iframe class="submitPopup" name="submitFrame"></iframe> -->
-			<!-- 			
-			<form action="submit.php" target="submitFrame" method="get" class="blueTeam" autocomplete="off">
-				<label>Blue Team Flag Input</label>
-				<input type="text" placeholder="" name="blueflag">
-				<input class="submitButton submitTabButton" type="submit" value="Submit">
+				<br><br>
+				<label style="font-weight: bold;">Username</label>
+				<input id="_userInput" class="submitFlagFormInput" type="text" name="user" placeholder="Enter username here">
+				<label style="font-weight: bold;">Flag</label>
+				<input class="submitFlagFormInput" type="text" name="flag" placeholder="Enter flag here">
+				<input class="submitButton" type="submit" name="submit-flag" value="Check Flag">
 			</form>
-
-			<form action="submit.php" target="submitFrame" method="get" class="redTeam" autocomplete="off">
-				<label>Red Team Flag Input</label>
-				<input type="text" placeholder="" name="redflag">
-				<input class="submitButton submitTabButton" type="submit" value="Submit">	
-			</form>-->
-
+			<a class="scoreBoardLink" href="scoreboard.php" target="_blank">Click here to check the leader board</a>
 		</div>
 
 		<a class="homeButton" href="index.php"><i class="fas fa-home fa-4x"></i></a>
