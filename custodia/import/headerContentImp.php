@@ -22,12 +22,14 @@
 				</div>
 				<br><br>
 				<label style="font-weight: bold;">Username</label>
+				<p style="font-size: 1em;">Make sure you remember your username otherwise your score wont add up</p>
 				<input id="_userInput" class="submitFlagFormInput" type="text" name="user" placeholder="Enter username here">
 				<label style="font-weight: bold;">Flag</label>
 				<input class="submitFlagFormInput" type="text" name="flag" placeholder="Enter flag here">
 				<input class="submitButton" type="submit" name="submit-flag" value="Check Flag">
 			</form>
-			<a class="scoreBoardLink" href="scoreboard.php" target="_blank">Click here to check the leader board</a>
+			<a class="scoreBoardLink" href="scoreboard.php" target="_blank"><input class="submitButton" type="submit" value="Open Scoreboard"></a>
+			<!-- <a class="scoreBoardLink" href="scoreboard.php" target="_blank">Click here to check the leader board</a> -->
 		</div>
 
 		<a class="homeButton" href="index.php"><i class="fas fa-home fa-4x"></i></a>
