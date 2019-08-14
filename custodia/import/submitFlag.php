@@ -4,12 +4,11 @@ if (isset($_POST['submit-flag'])) {
 	require 'database.php';
 
 	$one = 1;
-	$team = $_POST['team'];
-	$flag = $_POST['flag'];
-	if ($team == "solo") {
-		$username = $_POST['user'];
+	$flag = strval($_POST['flag']);
+	if (strval($_POST['team']) == "solo") {
+		$username = strval($_POST['user']);
 	}else{
-		$username = $_POST['team'];
+		$username = strval($_POST['team']);
 	}
 
 	$flags = array(
@@ -42,12 +41,12 @@ if (isset($_POST['submit-flag'])) {
 	}
 
 	// Start SQL Query
-	if (empty($team) || empty($flag) || empty($username)) {
+	if (empty($flag) || empty($username)) {
 		header("Location: ../../index.php?error=emptyfields");
 		exit();
 
-	}elseif(!preg_match("/^[a-zA-Z0-9]*$/", $username) || !preg_match("/^[a-zA-Z0-9]*$/", $flag)){
-		header("Location: ../../index.php?error=invalidform");
+	}elseif(!preg_match('/^[a-zA-Z0-9]*$/', $username)){
+		header("Location: ../../index.php?error=invalidusername");
 		exit();
 
 	}else{

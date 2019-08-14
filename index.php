@@ -2,11 +2,7 @@
 	if (isset($_GET['restart']) && $_GET['restart'] == 'true') {
 		require 'custodia/import/database.php';
 
-		// $zero = 0;
-		// $teamOne = "redTeam";
-		// $teamTwo = "blueTeam";
 		$sql = "TRUNCATE TABLE users";
-		// $sql = "UPDATE users SET flag1=?, flag2=?, flag3=?, flag4=?, flag5=?, flag6=?, flag7=?, flag8=?, flag9=?, flag10=?, flag11=?, flag12=?, flag13=?, flag14=?, flag15=?, flag16=? WHERE username=? AND username=?";
 
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -45,8 +41,8 @@
 			}elseif($_GET['error'] == "emptyfields"){
 				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Please fill all parts of the form</p>";
 
-			}elseif($_GET['error'] == "invalidform"){
-				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Stop trying to break my website</p>";
+			}elseif($_GET['error'] == "invalidusername"){
+				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Username is invalid</p>";
 
 			}elseif($_GET['error'] == "sqlerror"){
 				echo "<p style='color:#e43939;text-align:center;font-size:2.5em;'>Something went wrong???</p>";

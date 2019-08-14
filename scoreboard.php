@@ -54,6 +54,8 @@
 								echo "<td >Red Team</td>";
 							}elseif ($row['username'] == "blueTeam") {
 								echo "<td>Blue Team</td>";
+							}elseif ($i == 1) {
+								echo "<td><i style='color:#ffbf00;text-shadow: 1px 1px #000;padding-right:1em;' class='fas fa-crown'></i>".ucfirst($row['username'])."</td>";
 							}else{
 								echo "<td>".ucfirst($row['username'])."</td>";
 							}
