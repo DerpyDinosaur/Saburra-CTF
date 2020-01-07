@@ -5,14 +5,20 @@
 <html class="loadingPage">
 <head>
 	<title>Saburra Capture The Flag</title>
-	<!-- <link rel="stylesheet" type="text/css" href="custodia/css/bootstrap.css"> -->
 	<?php include 'custodia/import/headImp.php';?>
 	<script src="custodia/js/jquery.js"></script>
 	<script type='text/javascript'>
 		$(document).ready(function(){
-			$('#refreshBtn').click(function(){
+		    var min=60000;
+		    var max=65000;
+		    var random = Math.floor(Math.random() * (+max - +min)) + +min;
+
+			setInterval(relaodScores, random);
+
+			function relaodScores(){
 				$('#_leaderboardTable').load('custodia/import/reloadScores.php');
-			});
+				console.log('refresh');
+			}
 		});
 	</script>
 </head>
@@ -21,9 +27,6 @@
 		<?php include 'custodia/import/headerContentImp.php'; ?>
 	</header>
 	<section class="leaderboard">
-			<div class="refreshWrap">
-				<input id="refreshBtn" class="submitButton" type="submit" value="Refresh leader board">
-			</div>
 			<table id="_leaderboardTable" class="leaderboardTable">
 				<?php
 					$tableHeader = "<tr style='font-weight:bold;'>
