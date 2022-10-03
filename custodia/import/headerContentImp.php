@@ -29,7 +29,6 @@
 				<input class="submitButton" type="submit" name="submit-flag" value="Check Flag">
 			</form>
 			<a class="scoreBoardLink" href="scoreboard.php" target="_blank"><input class="submitButton" type="submit" value="Open Scoreboard"></a>
-			<!-- <a class="scoreBoardLink" href="scoreboard.php" target="_blank">Click here to check the leader board</a> -->
 		</div>
 
 		<a class="homeButton" href="index.php"><i class="fas fa-home fa-4x"></i></a>

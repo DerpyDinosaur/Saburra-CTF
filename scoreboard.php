@@ -6,21 +6,6 @@
 <head>
 	<title>Saburra Capture The Flag</title>
 	<?php include 'custodia/import/headImp.php';?>
-	<script src="custodia/js/jquery.js"></script>
-	<script type='text/javascript'>
-		$(document).ready(function(){
-		    var min=60000;
-		    var max=65000;
-		    var random = Math.floor(Math.random() * (+max - +min)) + +min;
-
-			setInterval(relaodScores, random);
-
-			function relaodScores(){
-				$('#_leaderboardTable').load('custodia/import/reloadScores.php');
-				console.log('refresh');
-			}
-		});
-	</script>
 </head>
 <body onload="loaded()">
 	<header>

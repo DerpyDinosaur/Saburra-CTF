@@ -88,6 +88,12 @@ if (isset($_POST['submit-flag'])) {
 				}else{
 					mysqli_stmt_bind_param($stmt, "si", $username, $one);
 					mysqli_stmt_execute($stmt);
+
+					// Update Total
+					$sql = "UPDATE users SET totalScore = f1+f2+f3+f4+f5+f6+f7+f8+f9+f10+f11+f12+f13+f14+f15+f16";
+					$stmt = mysqli_stmt_init($conn);
+					mysqli_stmt_prepare($stmt, $sql);
+					mysqli_stmt_execute($stmt);
 					header("Location: ../../index.php?flagSubmit=true");
 					exit();
 				}

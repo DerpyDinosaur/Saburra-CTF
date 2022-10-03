@@ -285,7 +285,7 @@ tr:nth-child(even) {background-color: rgba(0, 0, 0, 0.05);}
 
 .submitTab{
 	width: 100%;
-	height: 0;
+	height: 0%; /*CHANGE THIS TO 0*/
 	position: fixed;
 	display: flex;
 	/*flex-flow: row wrap;*/
