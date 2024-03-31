@@ -32,17 +32,6 @@
     Saburra is an entry level capture the flag that anyone can enjoy even non technical players. Saburra's name comes from Latin and it simply means sand. The challenges are set out so that you can start any where, but they come colour coded to show some level of complexity they hold. If you are unsure or lost start by trying level null. Level null is a simple practice puzzle to get yourself into the groove of things.
 </p>
 
-<div style="display:flex;justify-content:space-around;">
-    <h3 style="color:grey;">Level null</h3>
-	<h3 style="color:#39e47e;">Level I</h3>
-	<h3 style="color:#e49939;">Level II</h3>
-	<h3 style="color:#e43939;">Level III</h3>
-	<h3 style="color:#8839e4;">Level IV</h3>
-	<h3 style="color:#39d0e4;">Level V</h3>
-</div>
-
-
-
 ## <a id="how-to-guide">How to guide</a>
 #### Picking a challenge
 
@@ -59,41 +48,6 @@
 #### Flags and Submission
 
 > Saburra flags are a couple of words or a word acting like a password. You will know when you found one due to the word "Flag:" being before another word or words e.g. "bananasontoast". To check if your flag is correct click on the clipboard in the top right corner on any page. Type only the words after "Flag:" and they should all be lowercase except for a few exceptions. If at anytime you are confused ask one of the surrounding hosts.
-
-
-
-## <a id="challenge-backgrounds">Challenge Backgrounds and Definitions</a>
-
-#### Steganography
-> Is the act of hiding information in plain sight. Steganography at its core is a secret that does not draw attention to itself. Think of steg as not only a way to encrypt a message but to also disguise it. This can be done with just about any digital media, images, movies and even music files. If a message can be encrypted and then hidden in plain sight you have succeeded in creating a steg object.
-
-#### Password Cracking
-
-> This is pretty self explanatory but if you seem lost here is an explanation. Password cracking can be performed in a few different ways, brute force, dictionary, rainbow or a hybrid. Brute forcing entails an individual attempting every possibility until the object unlocks. Dictionary attacks are a pre made file full of passwords that are then tested like a brute force. A hybrid involves mixing words from a dictionary and then altering small sections while repetitive testing, for example "adam" is in the dictionary and then the brute force method adds "1900" then the next attempt will be "1901" so on so forth.
-
-#### Cookies
-
-> Are small files stored on a users computer while they browse the internet. These files hold small amounts of data regarding their activity on websites. For example remember password or usernames, language type, theme settings, ect.
-
-#### Bad Web Design
-
-*Coming soon*
-
-#### Reverse Engineering
-
-*Coming soon*
-
-#### Integrity
-
-*Coming soon*
-
-#### SQL Injection
-
-*Coming soon*
-
-#### The Button
-
-*Coming soon*
 
 ## <a href="credits">Credits</a>
 
